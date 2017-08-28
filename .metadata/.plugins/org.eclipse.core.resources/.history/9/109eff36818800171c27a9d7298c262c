@@ -1,0 +1,14 @@
+package br.com.management.service;
+
+import java.util.List;
+
+public interface UserProfileService {
+	
+	public List<UserProfile> findAll();
+	
+	public List<UserProfile> findAllByOrderByIdAsc();
+
+	public UserProfile findByType(String type);
+
+	public UserProfile findById(int id);
+}
