@@ -1,0 +1,25 @@
+package br.com.management.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import br.com.management.model.User;
+
+@Controller
+public class ProjectController {
+	
+	@ModelAttribute("user")
+	public User getUserName() {
+		return userService.findByUsername(getPrincipal());
+	}
+	
+	@RequestMapping(value = "/projects", method = RequestMethod.GET)
+	public String profile(ModelMap model) {
+		
+		return "projects";
+	}
+
+}

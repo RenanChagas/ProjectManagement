@@ -1,0 +1,15 @@
+package br.com.management.service;
+
+import br.com.management.model.Project;
+
+public interface ProjectService {
+	
+	public void save(Project project);
+	
+	public void update(Project project);
+	
+	public Project findById(int id);
+	
+	public Project findByProjectName(String username);
+
+}

@@ -120,7 +120,7 @@
                       </i>
                     </a>
                     <li class="MDC-navbar-menu"><a href="dashboard">Dashboard</a></li>
-                    <li class="MDC-navbar-menu"><a href="#!">Projects</a></li>
+                    <li class="MDC-navbar-menu"><a href="projects">Projects</a></li>
                     <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="#!">Notifications
                       <span class="new badge MDC-notification-badge-style" data-badge-caption="">
