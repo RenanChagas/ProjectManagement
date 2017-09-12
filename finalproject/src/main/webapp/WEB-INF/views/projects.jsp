@@ -171,22 +171,21 @@
 			<!-- Project -->
 			<div class="col MDC-padding-0 MDC-margin-right40 MDC-margin-bottom30">
 				<!-- CARD -->
-				<div class="MDC-card MDC-course-card-size"  onclick="location.href='#!';">
+				<div class="MDC-card MDC-course-card-size"  onclick="<t:url value="/projects/details?id=${projects.id}" />">
 					<!-- float btn -->
-					<a href="task-Detailed-Document.html"  onClick="!#"
+					<a href=" <t:url value="/projects/details?id=${projects.id}" /> " 
 						class="btn-floating btn waves-effect  MDC-absolute  right
 						MDC-background-blue  MDC-category-floatbtn-position">
 			            <i class="material-icons">query_builder</i>
 			    	</a>
 			    	
 			    	<!-- Image -->
-					<a href="#">
+			    	<a href=" <t:url value="/projects/details?id=${projects.id}" /> ">
 			        <div class="row center MDC-margin-top20">
 			        	<img src="<c:url value="/static/images/default/projects/${projects.icon}.png"/>"
 			            	class="MDC-avatar-circle-large MDC-shadow-default"/>
 			        </div>
 			        </a>
-			        
 			        <!-- Title -->
 					<div class="row center MDC-margin-bottom-10">
 			        	<font class="truncate MDC-font-15 MDC-color-grey-dark-2 MDC-font-h1">

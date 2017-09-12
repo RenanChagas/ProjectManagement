@@ -1,5 +1,9 @@
 package br.com.management.controller;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +16,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.management.model.Project;
 import br.com.management.model.User;
@@ -49,17 +54,74 @@ public class ProjectController {
 	@RequestMapping(value = "/projects/create", method = RequestMethod.POST)
 	public String newProject(Project project,
 			BindingResult result, ModelMap model) {
-
+		
+		if (project.getCreateUser() == null){
+			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			Date date = new Date();
+			project.setCreateDate(date);
+			project.setCreateUser(getPrincipal());
+		}
+		
 		System.out.println(project.toString());
 		
-		//if (result.hasErrors()) {
-		//	System.out.println("There are errors");
-		//	return "projectCreate";
-		//}
+		if (result.hasErrors()) {
+			System.out.println("There are errors");
+			return "redirect:/projects/create";
+		}
 		projectService.save(project);
 
 		return "redirect:/projects";
 	}
+	
+	@RequestMapping(value = "/projects/details", method = RequestMethod.GET)
+	public String updateProject(@RequestParam("id") int projectId, Model model){
+		
+		Project project = projectService.findById(projectId);
+		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		Date date = project.getDueDate();
+		dateFormat.format(date);
+		project.setDueDate(date);
+		System.out.println(project);
+		
+		model.addAttribute("project", projectService.findById(projectId));
+		System.out.println(projectService.findById(projectId));
+		return "projectDetail";
+	}
+	
+	@RequestMapping(value = "/projects/details", method = RequestMethod.POST)
+	public String updateProject(Project project,
+			BindingResult result, ModelMap model) {
+		
+		System.out.println(project.toString());
+		
+		if (project.getFinishState() != 1){
+			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+			Date date = new Date();
+			project.setFinishDate(date);
+			project.setFinishUser(getPrincipal());
+		}
+		
+		if (result.hasErrors()) {
+			System.out.println("There are errors");
+			return "redirect:/projects";
+		}
+		projectService.update(project);
+
+		return "redirect:/projects";
+	}
+	
+	@RequestMapping(value = "/deleteProject")
+	public String deleteProject(@Valid Project project,
+			BindingResult result, ModelMap model){
+			
+		Project deleteProject = new Project();
+		deleteProject = projectService.findById(project.getId());
+		System.out.println("Projet: " +deleteProject);
+		projectService.deleteById(deleteProject.getId());
+		
+		return "redirect:/projects";	
+	}
+	
 	
 	private String getPrincipal(){
 		String userName = null;

@@ -10,6 +10,8 @@ public interface ProjectService {
 	
 	public void update(Project project);
 	
+	public void deleteById(int id);
+	
 	public Project findById(int id);
 	
 	public Project findByProjectName(String projectName);

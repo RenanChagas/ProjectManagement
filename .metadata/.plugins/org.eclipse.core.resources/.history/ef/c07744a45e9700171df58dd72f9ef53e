@@ -1,0 +1,18 @@
+package br.com.management.model;
+
+public enum TaskState {
+	USER("User"),
+	ADMIN("Admin"),
+	MANAGER("Manager");
+	
+	String TaskState;
+	
+	private TaskState(String TaskState){
+		this.TaskState = TaskState;
+	}
+	
+	public String getTaskState(){
+		return TaskState;
+	}
+	
+}

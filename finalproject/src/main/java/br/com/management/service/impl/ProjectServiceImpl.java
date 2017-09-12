@@ -1,5 +1,8 @@
 package br.com.management.service.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +26,24 @@ public class ProjectServiceImpl implements ProjectService{
 	}
 
 	@Override
-	public void update(Project project) {	
+	public void update(Project project) {
+		
+		//Fixing null values that werent changed
+		Project projectRealValue = findById(project.getId());
+		if (project.getDueDate() == null){
+			project.setDueDate(projectRealValue.getDueDate());
+		}
+		if (project.getCreateUser() == null){
+			project.setCreateUser(projectRealValue.getCreateUser());
+		}
+		if (project.getCreateDate() == null){
+			project.setCreateDate(projectRealValue.getCreateDate());
+		}
+		
+		System.out.println(project);
+		System.out.println(projectRealValue);
+		
+		dao.save(project);
 	}
 
 	@Override
@@ -38,6 +58,11 @@ public class ProjectServiceImpl implements ProjectService{
 	
 	public List<Project> findAllByOrderByIdAsc() {
 		return dao.findAllByOrderByIdAsc();
+	}
+	
+	@Override
+	public void deleteById(int id) {
+		dao.deleteById(id);
 	}
 
 }
