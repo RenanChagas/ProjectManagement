@@ -1,0 +1,19 @@
+package br.com.management.model;
+
+public enum TaskType {
+	PENDING("Pending"),
+	COMPLETED("Completed"),
+	CANCELLED("Cancelled"),
+	FAILED("Failed");
+	
+	String taskType;
+	
+	private TaskType(String taskType){
+		this.taskType = taskType;
+	}
+	
+	public String getTaskType(){
+		return taskType;
+	}
+	
+}

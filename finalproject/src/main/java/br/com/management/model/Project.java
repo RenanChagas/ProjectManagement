@@ -1,12 +1,16 @@
 package br.com.management.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.List;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -53,6 +57,12 @@ public class Project {
 	
 	@Column(name="FINISH_STATE")
 	private Integer finishState;
+	
+	@Column(name="STATE_ICON")
+	private String stateIcon;
+	
+	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL,mappedBy="project", targetEntity = Task.class)
+    public List<Task> task;
 
 	public int getId() {
 		return id;
@@ -141,13 +151,14 @@ public class Project {
 	public void setFinishState(Integer finishState) {
 		this.finishState = finishState;
 	}
-
-	@Override
-	public String toString() {
-		return "Project [id=" + id + ", projectName=" + projectName + ", projectDesc=" + projectDesc + ", dueDate="
-				+ dueDate + ", icon=" + icon + ", createDate=" + createDate + ", createUser=" + createUser
-				+ ", finishDesc=" + finishDesc + ", finishUser=" + finishUser + ", finishDate=" + finishDate
-				+ ", finishState=" + finishState + "]";
-	}
 	
+
+	public String getStateIcon() {
+		return stateIcon;
+	}
+
+	public void setStateIcon(String stateIcon) {
+		this.stateIcon = stateIcon;
+	}
+
 }

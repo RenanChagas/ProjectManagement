@@ -1,5 +1,0 @@
-package br.com.management.model;
-
-public enum UserProfileType {
-
-}

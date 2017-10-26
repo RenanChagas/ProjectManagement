@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="projectName" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="servletContext.getRealPath(&quot;/&quot;)"/>
-			<item value="file"/>
-			<item value="getUserName().getUsername()"/>
-			<item value="name"/>
-			<item value="uploadFile"/>
-			<item value="form-avatar"/>
-			<item value="@RequestMapping(value = &quot;/uploadFile&quot;, method = RequestMethod.POST)&#x0A;&#x09;public @ResponseBody&#x0A;&#x09;String uploadFileHandler(@RequestParam(&quot;name&quot;) String name,&#x0A;&#x09;&#x09;&#x09;@RequestParam(&quot;file&quot;) MultipartFile file) {&#x0A;&#x0A;&#x09;&#x09;if (!file.isEmpty()) {&#x0A;&#x09;&#x09;&#x09;try {&#x0A;&#x09;&#x09;&#x09;&#x09;byte[] bytes = file.getBytes();&#x0A;&#x0A;&#x09;&#x09;&#x09;&#x09;// Creating the directory to store file&#x0A;&#x09;&#x09;&#x09;&#x09;String rootPath = System.getProperty(&quot;catalina.home&quot;);&#x0A;&#x09;&#x09;&#x09;&#x09;File dir = new File(rootPath + File.separator + &quot;tmpFiles&quot;);&#x0A;&#x09;&#x09;&#x09;&#x09;if (!dir.exists())&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;dir.mkdirs();&#x0A;&#x0A;&#x09;&#x09;&#x09;&#x09;// Create the file on server&#x0A;&#x09;&#x09;&#x09;&#x09;File serverFile = new File(dir.getAbsolutePath()&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;+ File.separator + name);&#x0A;&#x09;&#x09;&#x09;&#x09;BufferedOutputStream stream = new BufferedOutputStream(&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;new FileOutputStream(serverFile));&#x0A;&#x09;&#x09;&#x09;&#x09;stream.write(bytes);&#x0A;&#x09;&#x09;&#x09;&#x09;stream.close();&#x0A;&#x0A;&#x09;&#x09;&#x09;&#x09;logger.info(&quot;Server File Location=&quot;&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;+ serverFile.getAbsolutePath());&#x0A;&#x0A;&#x09;&#x09;&#x09;&#x09;return &quot;You successfully uploaded file=&quot; + name;&#x0A;&#x09;&#x09;&#x09;} catch (Exception e) {&#x0A;&#x09;&#x09;&#x09;&#x09;return &quot;You failed to upload &quot; + name + &quot; =&gt; &quot; + e.getMessage();&#x0A;&#x09;&#x09;&#x09;}&#x0A;&#x09;&#x09;} else {&#x0A;&#x09;&#x09;&#x09;return &quot;You failed to upload &quot; + name&#x0A;&#x09;&#x09;&#x09;&#x09;&#x09;+ &quot; because the file was empty.&quot;;&#x0A;&#x09;&#x09;}&#x0A;&#x09;}"/>
-			<item value="input-avatar"/>
+			<item value="ProjectName"/>
+			<item value="green"/>
+			<item value="materialize-gr"/>
+			<item value="materialize-"/>
+			<item value="materialize-red"/>
+			<item value="materialize-green"/>
+			<item value="MDC-background-blue"/>
+			<item value="stateIconColor"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -1,3 +1,0 @@
-INSERT INTO `project` (`id`, `team_name`, `team_desc`)
-VALUES
-	(1,'Globo','Team responsible for handling all Globo System using Java/Oracle');

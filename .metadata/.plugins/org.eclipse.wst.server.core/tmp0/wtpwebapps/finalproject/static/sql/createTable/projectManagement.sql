@@ -17,6 +17,9 @@ add column finish_user VARCHAR(30),
 add column finish_date date,
 add column finish_state BIGINT
 
+alter table PROJECT
+add column state_icon varchar(100)
+
 
 create table TASK_STATE(
    id BIGINT NOT NULL AUTO_INCREMENT,
@@ -24,3 +27,49 @@ create table TASK_STATE(
    PRIMARY KEY (id),
    UNIQUE (type)
 );
+
+
+create table TASK_TYPE(
+	id BIGINT NOT NULL AUTO_INCREMENT,
+	type VARCHAR(30) NOT NULL,
+	PRIMARY KEY (id),
+	UNIQUE (type) 
+);
+
+create table TASK(
+	id BIGINT NOT NULL AUTO_INCREMENT,
+	type BIGINT NOT NULL,
+	due_date date,
+	icon varchar(100) NOT NULL,
+	state BIGINT,
+	create_date date,
+	create_user VARCHAR(30),
+	finish_desc text,
+	finish_user VARCHAR(30),
+	finish_date date,
+	hours float,
+	CONSTRAINT `FK_TASK_TYPE_TASK` FOREIGN KEY (`type`) REFERENCES `TASK_TYPE` (`id`),
+	PRIMARY KEY (id)
+);
+
+alter table TASK
+add column hours float
+
+/* JOIN TABLE for MANY-TO-MANY relationship*/
+CREATE TABLE PROJECT_TASK (
+    project_id BIGINT NOT NULL,
+    task_id BIGINT NOT NULL,
+    PRIMARY KEY (project_id, task_id),
+    CONSTRAINT FK_PROJECT FOREIGN KEY (project_id) REFERENCES PROJECT (id),
+    CONSTRAINT FK_TASK FOREIGN KEY (task_id) REFERENCES TASK (id)
+);
+
+alter table TASK
+add column name VARCHAR(20) NOT NULL
+
+alter table TASK
+add column desc text
+
+alter table TASK
+add column hours_used float
+

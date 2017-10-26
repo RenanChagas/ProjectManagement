@@ -56,7 +56,6 @@ public class ProjectController {
 			BindingResult result, ModelMap model) {
 		
 		if (project.getCreateUser() == null){
-			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 			Date date = new Date();
 			project.setCreateDate(date);
 			project.setCreateUser(getPrincipal());
@@ -95,7 +94,6 @@ public class ProjectController {
 		System.out.println(project.toString());
 		
 		if (project.getFinishState() != 1){
-			DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 			Date date = new Date();
 			project.setFinishDate(date);
 			project.setFinishUser(getPrincipal());

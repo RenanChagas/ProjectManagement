@@ -1,8 +1,0 @@
-create table PROJECT (
-   id BIGINT NOT NULL AUTO_INCREMENT,
-   project_name VARCHAR(20) NOT NULL,
-   project_desc text,
-   due_date datetime,
-   icon varchar(100) NOT NULL,
-   PRIMARY KEY (id)
-);

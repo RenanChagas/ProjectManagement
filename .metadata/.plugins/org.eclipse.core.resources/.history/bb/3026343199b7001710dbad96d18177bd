@@ -1,0 +1,5 @@
+package br.com.management.dao;
+
+public class TaskDao {
+
+}

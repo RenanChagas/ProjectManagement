@@ -1,0 +1,17 @@
+package br.com.management.model;
+
+public enum TaskType {
+	TEST("Test"),
+	BUG("Bug");
+	
+	String taskType;
+	
+	private TaskType(String taskType){
+		this.taskType = taskType;
+	}
+	
+	public String getTaskType(){
+		return taskType;
+	}
+	
+}

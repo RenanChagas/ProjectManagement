@@ -475,9 +475,6 @@
                             <div class="col">
                             	<form:radiobutton path="finishState" value="3" label="Cancelled" class="with-gap" name="projectState"/>
                        		</div>
-                       		<div class="col">
-                            	<form:radiobutton path="finishState" value="4" label="Failed" class="with-gap" name="projectState"/>
-                       		</div>
                 		</div>
                         <!-- Status-END-->
 	   				</div>
