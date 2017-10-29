@@ -1,0 +1,22 @@
+package br.com.management.dao;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import br.com.management.model.Notification;
+
+public interface NotificationDao {
+	
+	public Notification findById(int id);
+	
+	public Task findByName(String name);
+	
+	public List<Task> findAllByOrderByIdAsc();
+	
+	public List<Task> findAllByProjectIdOrderByIdAsc(int id);
+	
+	@Transactional
+	public void deleteById(int id);
+
+}

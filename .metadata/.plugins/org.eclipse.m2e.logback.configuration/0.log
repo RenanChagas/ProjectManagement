@@ -8000,3 +8000,425 @@ Caused by: org.eclipse.core.runtime.CoreException: One or more constraints have 
 2017-10-25 22:55:59,718 [Worker-319] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2017-10-25 22:55:59,719 [Worker-319] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-10-25 22:55:59,725 [Worker-319] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 18:56:54,331 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for commons-logging:commons-logging:jar:1.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2017-10-28 18:56:55,608 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 18:56:55,620 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 18:56:55,625 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 18:56:55,632 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 19:09:05,226 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:09:05,258 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-28 19:09:05,260 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:09:05,277 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 19:19:10,216 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:19:10,228 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-28 19:19:10,229 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:19:10,237 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 19:19:13,539 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:19:13,545 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-28 19:19:13,546 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:19:13,551 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 19:19:30,628 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:19:30,636 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-28 19:19:30,637 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 19:19:30,643 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:34:41,583 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:34:41,626 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:34:41,628 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:34:41,641 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:34:50,308 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:34:50,332 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:34:50,334 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:34:50,344 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:34:59,628 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:34:59,640 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:34:59,642 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:34:59,650 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:35:22,399 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:35:22,412 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:35:22,413 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:35:22,426 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:35:24,476 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:35:24,482 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:35:24,483 [Worker-116] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:35:24,488 [Worker-116] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:35:31,832 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:35:31,841 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:35:31,842 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:35:31,850 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:36:40,670 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:36:40,682 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:36:40,683 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:36:40,692 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:37:11,970 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:37:11,978 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:37:11,982 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:37:11,988 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:37:16,308 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:37:16,317 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:37:16,319 [Worker-120] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:37:16,330 [Worker-120] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:38:41,744 [Worker-101] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:38:41,753 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:38:41,754 [Worker-101] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:38:41,766 [Worker-101] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:40:25,995 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:26,008 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:40:26,010 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:26,021 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:40:28,573 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:28,584 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:40:28,586 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:28,599 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:40:35,256 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:35,277 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:40:35,279 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:35,287 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:40:44,224 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:44,239 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:40:44,241 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:44,250 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:40:52,152 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:52,159 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:40:52,161 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:52,167 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:40:59,151 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:59,159 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:40:59,163 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:40:59,170 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:41:59,616 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:41:59,625 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:41:59,627 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:41:59,633 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:42:09,678 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:09,701 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:42:09,705 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:09,717 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:42:15,977 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:15,983 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:42:15,984 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:15,990 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:42:28,701 [Worker-123] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:28,707 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:42:28,709 [Worker-123] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:28,715 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:42:42,490 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:42,501 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:42:42,504 [Worker-119] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:42,512 [Worker-119] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:42:47,747 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:47,757 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:42:47,758 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:42:47,767 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:43:14,669 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:43:14,682 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:43:14,686 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:43:14,695 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:44:39,284 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:44:39,294 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:44:39,295 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:44:39,303 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:44:49,715 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:44:49,724 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:44:49,726 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:44:49,734 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:45:06,855 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:06,861 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:45:06,862 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:06,868 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:45:10,937 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:10,947 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:45:10,950 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:10,958 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:45:19,651 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:19,664 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:45:19,666 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:19,673 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:45:24,444 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:24,450 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:45:24,451 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:24,456 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:45:33,753 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:33,762 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:45:33,763 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:45:33,775 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:47:43,095 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:47:43,106 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-28 23:47:43,108 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:47:43,117 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:48:40,063 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:48:40,073 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-10-28 23:48:40,074 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:48:40,084 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:49:45,066 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:49:45,076 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:49:45,078 [Worker-125] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:49:45,101 [Worker-125] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:49:58,896 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:49:58,909 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:49:58,910 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:49:58,917 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:51:40,590 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:51:40,611 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:51:40,613 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:51:40,621 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:55:47,934 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:55:47,969 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:55:47,970 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:55:47,983 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:56:11,320 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:11,333 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:56:11,335 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:11,352 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:56:17,176 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:17,192 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:56:17,193 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:17,203 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:56:33,184 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:33,194 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:56:33,195 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:33,204 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:56:47,664 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:47,673 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:56:47,675 [Worker-117] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:56:47,687 [Worker-117] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:57:34,688 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:34,729 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:57:34,731 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:34,742 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:57:42,798 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:42,811 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:57:42,814 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:42,823 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:57:48,646 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:48,653 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:57:48,655 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:48,669 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:57:56,927 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:56,938 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:57:56,939 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:57:56,949 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:58:27,089 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:58:27,099 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:58:27,100 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:58:27,108 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:58:41,660 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:58:41,694 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:58:41,695 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:58:41,707 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:58:44,868 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:58:44,874 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:58:44,875 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:58:44,880 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:59:02,301 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:02,320 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:59:02,321 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:02,331 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:59:14,029 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:14,041 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:59:14,043 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:14,054 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:59:17,794 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:17,805 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:59:17,806 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:17,817 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:59:30,098 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:30,106 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:59:30,107 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:30,114 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-28 23:59:49,917 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:49,926 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-28 23:59:49,927 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-28 23:59:49,938 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 00:00:05,463 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:05,472 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 00:00:05,473 [Worker-127] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:05,493 [Worker-127] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 00:00:17,045 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:17,059 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 00:00:17,061 [Worker-115] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:17,083 [Worker-115] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 00:00:18,112 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:18,118 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 00:00:18,121 [Worker-122] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:18,127 [Worker-122] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 00:00:25,081 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:25,099 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 00:00:25,100 [Worker-121] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:25,109 [Worker-121] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 00:00:30,614 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:30,620 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 00:00:30,621 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:30,627 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 00:00:42,385 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:42,397 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 00:00:42,398 [Worker-118] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:42,421 [Worker-118] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 00:00:49,808 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:49,829 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 00:00:49,831 [Worker-124] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 00:00:49,842 [Worker-124] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 01:05:02,620 [Worker-154] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:02,640 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 01:05:02,641 [Worker-154] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:02,646 [Worker-154] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 01:05:22,676 [Worker-157] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:22,683 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 01:05:22,686 [Worker-157] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:22,695 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 01:05:42,339 [Worker-153] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:42,349 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 01:05:42,351 [Worker-153] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:42,357 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 01:05:47,844 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:47,853 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 01:05:47,855 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:05:47,863 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 01:06:13,457 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:06:13,465 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 01:06:13,466 [Worker-155] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:06:13,476 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 01:07:08,775 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:07:08,783 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 01:07:08,784 [Worker-150] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 01:07:08,791 [Worker-150] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:28:18,180 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:18,203 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:28:18,204 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:18,209 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:28:33,450 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:33,463 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:28:33,464 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:33,478 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:28:51,967 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:51,974 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:28:51,976 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:51,986 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:28:59,143 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:59,154 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:28:59,155 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:28:59,161 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:29:00,184 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:00,190 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:29:00,191 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:00,200 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:29:07,045 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:07,056 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:29:07,057 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:07,068 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:29:15,941 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:15,970 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:29:15,972 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:15,984 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:29:28,673 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:28,680 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:29:28,684 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:28,689 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:29:47,400 [Worker-470] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:47,413 [Worker-470] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:29:47,415 [Worker-470] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:47,426 [Worker-470] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:29:58,433 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:58,445 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:29:58,446 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:29:58,458 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:30:02,912 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:02,922 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:30:02,923 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:02,940 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:30:14,855 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:14,876 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:30:14,878 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:14,895 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:30:25,118 [Worker-470] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:25,130 [Worker-470] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:30:25,131 [Worker-470] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:25,145 [Worker-470] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:30:30,391 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:30,400 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:30:30,401 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:30,407 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:30:54,096 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:54,102 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:30:54,104 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:30:54,109 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:31:07,149 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:07,156 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:31:07,158 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:07,165 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:31:20,182 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:20,211 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:31:20,212 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:20,234 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:31:23,837 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:23,850 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:31:23,853 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:23,865 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:31:44,929 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:44,941 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:31:44,942 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:44,962 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:31:47,489 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:47,502 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:31:47,503 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:47,511 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:31:59,331 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:59,339 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:31:59,339 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:31:59,346 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:32:03,497 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:03,502 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:32:03,503 [Worker-467] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:03,510 [Worker-467] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:32:14,814 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:14,833 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:32:14,835 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:14,843 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:32:29,546 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:29,556 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:32:29,557 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:29,566 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:32:40,545 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:40,554 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:32:40,555 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:40,562 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:32:48,127 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:48,133 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:32:48,135 [Worker-466] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:48,142 [Worker-466] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:32:58,219 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:58,225 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:32:58,226 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:32:58,232 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:33:01,692 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:33:01,700 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:33:01,701 [Worker-471] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:33:01,706 [Worker-471] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:33:17,463 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:33:17,470 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:33:17,470 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:33:17,476 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:34:07,859 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:07,877 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:34:07,878 [Worker-469] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:07,891 [Worker-469] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:34:15,119 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:15,133 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:34:15,135 [Worker-472] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:15,144 [Worker-472] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:34:18,333 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:18,339 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:34:18,341 [Worker-463] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:18,348 [Worker-463] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:34:29,943 [Worker-473] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:29,949 [Worker-473] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:34:29,950 [Worker-473] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:29,954 [Worker-473] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:34:47,474 [Worker-470] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:47,479 [Worker-470] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:34:47,480 [Worker-470] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:34:47,486 [Worker-470] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources
+2017-10-29 12:37:27,074 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for commons-logging:commons-logging:jar:1.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+2017-10-29 12:37:29,840 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:37:29,865 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-10-29 12:37:29,872 [Worker-12] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-10-29 12:37:29,883 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/renanchagas/Documents/Workspace-STS/Github/ProjectManagement/finalproject/src/test/resources

@@ -39,4 +39,8 @@
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.Type"/>
+<fullyQualifiedTypeName name="br.com.management.service.NotificationService"/>
+<fullyQualifiedTypeName name="br.com.management.service.TaskService"/>
+<fullyQualifiedTypeName name="br.com.management.model.Notification"/>
 </qualifiedTypeNameHistroy>

@@ -45,8 +45,7 @@ public class TaskController {
 	@RequestMapping(value = "/projects/tasks", method = RequestMethod.GET)
 	public String list(@RequestParam("id") int projectId, Model model){
 		Project project = projectService.findById(projectId);
-		Task taskTeste = taskService.findById(19);
-		System.out.println(taskTeste.toString());
+		
 		
 		model.addAttribute("task", taskService.findAllByProjectIdOrderByIdAsc(projectId));
 		model.addAttribute("project", project);
