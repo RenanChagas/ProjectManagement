@@ -1,8 +1,10 @@
 package br.com.management.model;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -58,6 +61,12 @@ public class User {
              joinColumns = { @JoinColumn(name = "USER_ID") }, 
              inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
 	private Set<UserProfile> userProfiles = new HashSet<UserProfile>();
+	
+	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL,mappedBy="user", targetEntity = Task.class)
+    public List<Task> task;
+	
+	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL,mappedBy="user", targetEntity = Notification.class)
+    public List<Notification> notification;
 	
 	public int getId() {
 		return id;
@@ -129,6 +138,22 @@ public class User {
 
 	public void setUserProfiles(Set<UserProfile> userProfiles) {
 		this.userProfiles = userProfiles;
+	}
+
+	public List<Task> getTask() {
+		return task;
+	}
+
+	public void setTask(List<Task> task) {
+		this.task = task;
+	}
+	
+	public List<Notification> getNotification() {
+		return notification;
+	}
+
+	public void setNotification(List<Notification> notification) {
+		this.notification = notification;
 	}
 
 	@Override

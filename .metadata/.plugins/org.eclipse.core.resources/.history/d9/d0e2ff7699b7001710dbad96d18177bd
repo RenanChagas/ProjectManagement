@@ -1,5 +1,0 @@
-package br.com.management.service;
-
-public interface TaskService {
-
-}

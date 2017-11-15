@@ -1,5 +1,7 @@
 package br.com.management.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -19,7 +21,6 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
-	
 	public void save(User user){
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		dao.save(user);
@@ -31,6 +32,10 @@ public class UserServiceImpl implements UserService{
 
 	public User findByUsername(String username) {
 		return dao.findByUsername(username);
+	}
+	
+	public List<User> findAllByOrderByIdAsc(){
+		return dao.findAllByOrderByIdAsc();
 	}
 
 	public void update(User user) {

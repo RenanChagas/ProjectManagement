@@ -1,5 +1,7 @@
 package br.com.management.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
@@ -31,6 +34,14 @@ public class Notification {
 	@ManyToOne(fetch=FetchType.EAGER, optional = false)
 	@JoinColumn(name="TASK_ID",referencedColumnName="id")  
     private Task task;
+	
+	@ManyToOne(fetch=FetchType.EAGER, optional = false)
+	@JoinColumn(name="USER_ID",referencedColumnName="id")  
+    private User user;
+	
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
+	@Column(name="CREATE_DATE")
+	private Date createDate;
 
 	public int getId() {
 		return id;
@@ -63,6 +74,28 @@ public class Notification {
 
 	public void setTask(Task task) {
 		this.task = task;
+	}
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Notification [id=" + id + ", flRead=" + flRead + ", notificationType=" + notificationType + ", task="
+				+ task + ", user=" + user + ", createDate=" + createDate + "]";
 	}
 	
 }

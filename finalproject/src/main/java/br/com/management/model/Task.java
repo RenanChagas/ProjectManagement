@@ -1,7 +1,9 @@
 package br.com.management.model;
 
 import java.util.Date;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -71,6 +74,13 @@ public class Task {
 	@ManyToOne(fetch=FetchType.EAGER, optional = false)
 	@JoinColumn(name="PROJECT_ID",referencedColumnName="id")  
     private Project project;
+	
+	@ManyToOne(fetch=FetchType.EAGER, optional = false)
+	@JoinColumn(name="USER_ID",referencedColumnName="id")  
+    private User user;
+	
+	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL,mappedBy="task", targetEntity = Notification.class)
+    public List<Notification> notification;
 	
 	public int getId() {
 		return id;
@@ -192,11 +202,28 @@ public class Task {
 		this.hoursUsed = hoursUsed;
 	}
 
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public List<Notification> getNotification() {
+		return notification;
+	}
+
+	public void setNotification(List<Notification> notification) {
+		this.notification = notification;
+	}
+
 	@Override
 	public String toString() {
 		return "Task [id=" + id + ", name=" + name + ", description=" + description + ", dueDate=" + dueDate + ", icon="
 				+ icon + ", state=" + state + ", createDate=" + createDate + ", createUser=" + createUser
 				+ ", finishDesc=" + finishDesc + ", finishUser=" + finishUser + ", finishDate=" + finishDate
-				+ ", hours=" + hours + ", taskType=" + taskType + ", project=" + project + "]";
+				+ ", hours=" + hours + ", hoursUsed=" + hoursUsed + ", taskType=" + taskType + ", project=" + project
+				+ ", user=" + user + "]";
 	}
 }

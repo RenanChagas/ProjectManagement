@@ -19,7 +19,8 @@ public class NotificationServiceImpl implements NotificationService {
 
 	@Override
 	public void save(Notification notification) {
-		dao.save(notification);
+		System.out.println("Notificação 222" + notification.toString());
+		dao.saveAndFlush(notification);
 	}
 
 	@Override

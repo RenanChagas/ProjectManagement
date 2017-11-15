@@ -26,7 +26,6 @@
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="br.com.management.dao.ProjectDao"/>
 <fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="br.com.management.service.ProjectService"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
@@ -43,4 +42,5 @@
 <fullyQualifiedTypeName name="br.com.management.service.NotificationService"/>
 <fullyQualifiedTypeName name="br.com.management.service.TaskService"/>
 <fullyQualifiedTypeName name="br.com.management.model.Notification"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

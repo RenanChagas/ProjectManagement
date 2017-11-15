@@ -39,6 +39,8 @@
 
       $('#textareaOverview').trigger('autoresize');
 
+      $('#taskUser').material_select();
+      
     });
   </script>
 
@@ -163,7 +165,7 @@
 <!-- TITLE PAGE-END-->
 
 <!-- CONTAINER-->
-<form:form id="taskCreate-form" method="POST" modelAttribute="task" class="form-horizontal">
+<form:form id="taskCreate-form" method="POST" commandName="task" class="form-horizontal">
 <div class="MDC-page-center MDC-page-container MDC-margin-top40">
 	<div class="row MDC-float-none">
      	<!-- CONTEUDO -->
@@ -227,9 +229,20 @@
                   		<!-- Hours -->      
                       <div class="row MDC-margin-bottom30">
                       	<div class="col MDC-maxSize-300">
+                      		<label for="input_hours">Hours</label>
                       		<form:input id="input_hours" placeholder="0.0 Hours" type="number" path="hours" step="0.1"
-														class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300"/>
-                                <label for="input_hours">Hours</label>
+														class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300"/>             
+                      	</div>
+                      </div>
+                      
+                      <div class="row MDC-margin-bottom30">
+                      	<div class="col MDC-maxSize-300">
+	                      		<label for="taskUser">Assign to</label>
+	                      		<form:select id="taskUser" path="user" multiple="false"
+	                      			class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" >
+	                      			<form:option value="" label="Choose a user" />
+	                      			<form:options itemValue="id" itemLabel="username" value="${task.user}" items="${allUsers}" /> 
+	                      		</form:select>
                       	</div>
                       </div>
                         

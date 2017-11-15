@@ -3,6 +3,7 @@ package br.com.management.controller;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -42,6 +43,12 @@ public class TaskController {
 		return userService.findByUsername(getPrincipal());
 	}
 	
+	@ModelAttribute("allUsers")
+	public List<User> getAllUsers() {
+		return userService.findAllByOrderByIdAsc();
+	}
+	
+	
 	@RequestMapping(value = "/projects/tasks", method = RequestMethod.GET)
 	public String list(@RequestParam("id") int projectId, Model model){
 		Project project = projectService.findById(projectId);
@@ -59,22 +66,29 @@ public class TaskController {
 		
 		model.addAttribute("task", task);
 		model.addAttribute("project", project);
+		model.addAttribute("user",new User());
 		return "taskCreate";
 	}
 	
 	@RequestMapping(value = "/task/create", method = RequestMethod.POST)
 	public String newTask(@RequestParam("id") int projectId, @RequestParam("taskType") int taskType, ModelMap model, Task task,
-			BindingResult result, RedirectAttributes ra) {
+			BindingResult result, RedirectAttributes ra, @ModelAttribute("user") User selectedUser) {
 		
 		TaskType taskType2 = new TaskType();
 		taskType2.setId(taskType);
 		task.setTaskType(taskType2);
+	
+		//SETANDO O USUARIO DA TASK
+		User user = userService.findByUsername(selectedUser.getUsername());
+		task.setUser(user);
 		
 		if (task.getCreateUser() == null){
 			Date date = new Date();
 			task.setCreateDate(date);
 			task.setCreateUser(getPrincipal());
 		}
+		
+		System.out.println("Verificando objeto Usuario" + task);
 		
 		Project project = projectService.findById(projectId);
 		task.setProject(project);

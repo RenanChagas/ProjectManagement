@@ -25,7 +25,7 @@ public class NotificationType {
 	@Column(name="TYPE", nullable=false)
 	private String type;
 	
-	@OneToMany(fetch=FetchType.LAZY, cascade = CascadeType.ALL,mappedBy="notificationType", targetEntity = Notification.class)
+	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL,mappedBy="notificationType", targetEntity = Notification.class)
     public List<Notification> notification;
 
 	public int getId() {
@@ -50,6 +50,11 @@ public class NotificationType {
 
 	public void setNotification(List<Notification> notification) {
 		this.notification = notification;
+	}
+
+	@Override
+	public String toString() {
+		return "NotificationType [id=" + id + ", type=" + type + "]";
 	}
 
 }
