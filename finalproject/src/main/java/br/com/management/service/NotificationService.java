@@ -3,6 +3,7 @@ package br.com.management.service;
 import java.util.List;
 
 import br.com.management.model.Notification;
+import br.com.management.model.User;
 
 public interface NotificationService {
 
@@ -16,6 +17,8 @@ public interface NotificationService {
 	
 	public List<Notification> findAllByOrderByIdAsc();
 	
-	public List<Notification> findAllByTaskIdOrderByIdAsc(int id);
+	public List<Notification> findAllByUserOrderByIdAsc(User user);
+	
+	public void updateNotificationStatus(Notification notification);
 
 }

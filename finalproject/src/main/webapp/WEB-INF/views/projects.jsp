@@ -28,12 +28,6 @@
     $(document).ready(function(){
       $('.modal').modal();
       
-      
-      
-      function stateIconColor2() {
-    	  
-      }
-      
     });
     
 

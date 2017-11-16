@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="project_id" key="selection"/>
+		<item value="updateNotificationStatus" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="project_id"/>
-			<item value="type"/>
-			<item value="BO"/>
-			<item value="BOOL"/>
-			<item value="finished by"/>
-			<item value="LAZY"/>
-			<item value="lazy"/>
-			<item value="hours"/>
+			<item value="updateNotificationStatus"/>
+			<item value="script"/>
+			<item value="alteraStatus"/>
+			<item value="badge"/>
+			<item value="details"/>
+			<item value="stateIconColor2"/>
+			<item value="notificationType"/>
+			<item value="notification"/>
 		</list>
 		<list key="replacehistory">
 		</list>

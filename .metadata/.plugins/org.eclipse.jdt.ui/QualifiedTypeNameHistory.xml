@@ -10,7 +10,6 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="br.com.management.service.UserService"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
-<fullyQualifiedTypeName name="br.com.management.model.User"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetails"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
@@ -39,8 +38,12 @@
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Type"/>
-<fullyQualifiedTypeName name="br.com.management.service.NotificationService"/>
 <fullyQualifiedTypeName name="br.com.management.service.TaskService"/>
-<fullyQualifiedTypeName name="br.com.management.model.Notification"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.com.management.dao.NotificationTypeDao"/>
+<fullyQualifiedTypeName name="br.com.management.service.NotificationService"/>
+<fullyQualifiedTypeName name="br.com.management.service.NotificationTypeService"/>
+<fullyQualifiedTypeName name="br.com.management.model.User"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="br.com.management.model.Notification"/>
 </qualifiedTypeNameHistroy>

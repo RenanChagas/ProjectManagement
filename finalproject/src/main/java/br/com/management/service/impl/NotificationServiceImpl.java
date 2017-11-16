@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.management.dao.NotificationDao;
 import br.com.management.model.Notification;
+import br.com.management.model.User;
 import br.com.management.service.NotificationService;
 
 @Service("NotificationService")
@@ -19,8 +20,18 @@ public class NotificationServiceImpl implements NotificationService {
 
 	@Override
 	public void save(Notification notification) {
-		System.out.println("Notificação 222" + notification.toString());
 		dao.saveAndFlush(notification);
+	}
+	
+	public void updateNotificationStatus(Notification notification){
+		
+		Notification notificationNew = dao.findById(notification.getId());
+		if(notificationNew.isFlRead()){
+			notificationNew.setFlRead(false);
+		}else{
+			notificationNew.setFlRead(true);
+		}
+		dao.saveAndFlush(notificationNew);
 	}
 
 	@Override
@@ -48,9 +59,8 @@ public class NotificationServiceImpl implements NotificationService {
 	}
 
 	@Override
-	public List<Notification> findAllByTaskIdOrderByIdAsc(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Notification> findAllByUserOrderByIdAsc(User user) {
+		return dao.findAllByUserOrderByIdAsc(user);
 	}
 
 }

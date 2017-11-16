@@ -41,7 +41,6 @@ public class TaskServiceImpl implements TaskService{
 		
 		task.setState(1);
 
-		System.out.println("TASK QUE VAI SER CRIADA DE SER CRIADA" + task.toString());
 		Task createTask = dao.saveAndFlush(task);
 
 		//Criar Objeto para criação de notificação da tarefa
@@ -52,13 +51,7 @@ public class TaskServiceImpl implements TaskService{
 		notification.setUser(createTask.getUser());
 		notification.setCreateDate(createTask.getCreateDate());
 		
-		System.out.println("TASK QUE ACABA DE SER CRIADA" + createTask.getId());
-		System.out.println("Notificação que será criada" + notification.toString());
-		
 		notificationService.save(notification);
-		
-
-		
 	}
 
 	@Override
