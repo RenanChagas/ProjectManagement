@@ -8,6 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -18,6 +19,7 @@ import br.com.management.service.TaskService;
 import br.com.management.service.UserService;
 
 @Controller
+@RequestMapping("/notification")
 public class NotificationController {
 	
 	@Autowired
@@ -34,17 +36,27 @@ public class NotificationController {
 		return userService.findByUsername(getPrincipal());
 	}
 	
-	@RequestMapping(value = "/notifications", method = RequestMethod.GET)
+	@RequestMapping(value = { "" , "/" })
 	public String findNotification(ModelMap model) {
 		
+		model.addAttribute("currentSorting", "Latest");
 		model.addAttribute("notification", notificationService.findAllByUserOrderByIdAsc(userService.findByUsername(getPrincipal())));
 		return "notifications";
 	}
 	
-	@RequestMapping("updateNotificationStatus")
+	@RequestMapping(value= "/filter/{sortingType}", method = RequestMethod.GET)
+	public String sortNotification(ModelMap model, @PathVariable String sortingType){
+		
+		model.addAttribute("currentSorting", sortingType);
+		
+		model.addAttribute("notification", notificationService.findByFilter(sortingType, userService.findByUsername(getPrincipal())));
+		return "notifications";
+	}
+	
+	
+	@RequestMapping(value = "/updateNotificationStatus", method = RequestMethod.POST)
 	public void updateStatus(Notification notification, HttpServletResponse response){
 		notificationService.updateNotificationStatus(notification);
-		//return "redirect:/notifications";
 		response.setStatus(200);
 	}
 	

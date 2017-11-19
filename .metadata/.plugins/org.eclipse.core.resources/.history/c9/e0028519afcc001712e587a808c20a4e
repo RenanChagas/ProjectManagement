@@ -1,0 +1,8 @@
+package br.com.management.model;
+
+public enum SortingType {
+	LATEST("Latest"),
+	NEWEST("Newest"),
+	FINISHED("Finished");
+
+}

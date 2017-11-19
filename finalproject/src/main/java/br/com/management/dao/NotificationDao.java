@@ -19,8 +19,15 @@ public interface NotificationDao extends JpaRepository<Notification, Long>{
 	
 	public List<Notification> findAllByTaskIdOrderByIdAsc(int id);
 	
+	//Newest
 	public List<Notification> findAllByUserOrderByIdAsc(User user);
 	
+	//Latest
+	public List<Notification> findAllByUserOrderByIdDesc(User user);
+	
+	//Finished and Open
+	public List<Notification> findAllByUserAndFlReadOrderByIdDesc(User user, boolean flRead);
+
 	@Transactional
 	public void deleteById(int id);
 

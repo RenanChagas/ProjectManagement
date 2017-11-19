@@ -26,6 +26,7 @@
 
 </head>
 <body>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
 	<!-- NAV TOP  -->
 	<nav id="logo_nav" class="MDC-navbar-style MDC-shadow-0 hide-on-small-and-down">
@@ -71,10 +72,10 @@
 	            	</a>
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
-	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="profile">Profile</a></li>
+	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="logout">Logout</a></li>
+	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
           		</div>
         	</div>
@@ -103,13 +104,10 @@
                         menu
                       </i>
                     </a>
-                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="dashboard">Dashboard</a></li>
-                    <li class="MDC-navbar-menu"><a href="projects">Projects</a></li>
+                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/dashboard">Dashboard</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
                     <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
-                    <li class="MDC-navbar-menu"><a  href="#!">Notifications
-                      <span class="new badge MDC-notification-badge-style" data-badge-caption="">
-                        <font class="MDC-font-weight-400">4 NEW</font>
-                      </span>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                       </a>
                     </li>
                   </ul>

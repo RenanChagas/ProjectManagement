@@ -1,0 +1,18 @@
+package br.com.management.model;
+
+public enum SortingType {
+	LATEST("Latest"),
+	NEWEST("Newest"),
+	FINISHED("Finished");
+	
+	String sortingType;
+
+	public String getSortingType() {
+		return sortingType;
+	}
+
+	public void setSortingType(String sortingType) {
+		this.sortingType = sortingType;
+	}
+
+}

@@ -13,8 +13,9 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/css" rel="stylesheet" media="screen,projection" href="<c:url value='/static/css/materialize.css' />"/>
   <link type="text/css" rel="stylesheet" media="screen,projection" href="<c:url value='/static/css/custom-css.css' />"/>
+  <link type="text/css" rel="stylesheet" media="screen,projection" href="<c:url value='/static/css/materialize.css' />"/>
+  
 
   <!--  Scripts-->
   <script src="<c:url value="/static/js/jquery-2.1.1.min.js" />"></script>
@@ -24,19 +25,26 @@
   <!-- Website Logo -->
   <link rel="icon" href="<c:url value="/static/images/default/logo.png"/>">
   
-  <script>
+  <script type="text/javascript">
+  
+  $(document).ready(function() {
+	 
+  });
   
 		//Função para finalizar uma tarefa
 		function alteraStatus(id){
-			$.post("updateNotificationStatus", {'id' : id}, function(){
-				location.reload();
+
+			$.post("notification/updateNotificationStatus", {'id' : id}, function(){
+				document.location.reload(true);
 			});
 		}
-  
+		
 	</script>
   
 </head>
 <body>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 
 <!-- NAV TOP  -->
 	<nav id="logo_nav" class="MDC-navbar-style MDC-shadow-0 hide-on-small-and-down">
@@ -82,10 +90,10 @@
 	            	</a>
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
-	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="profile">Profile</a></li>
+	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="logout">Logout</a></li>
+	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
           		</div>
         	</div>
@@ -114,10 +122,10 @@
                         menu
                       </i>
                     </a>
-                    <li class="MDC-navbar-menu"><a href="dashboard">Dashboard</a></li>
-                    <li class="MDC-navbar-menu"><a href="projects">Projects</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
                     <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
-                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="notifications">Notifications</a>
+                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/notification">Notifications</a>
                     </li>
                   </ul>
                   <div id="mySidenav" class="MDC-sidenav">
@@ -147,9 +155,24 @@
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
                    MDC-news-counterBar-position">/
       </font>
-      <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Latest</font>
-      <i class="material-icons MDC-icon-small MDC-color-blue
+     	<!-- Dropdown Sorting -->
+		  <a class='dropdown-button btn MDC-btn-dropdown-sort MDC-h5-style MDC-color-blue' 
+		  	href='#' data-activates='sortDropdown'>${currentSorting}
+		  	
+		  </a>
+		  <i class="material-icons MDC-icon-small MDC-color-blue
                 MDC-news-expand-icon-position MDC-relative">expand_more</i>
+		
+		  <!-- Dropdown Structure -->
+		  <c:url var="notificationUrl" value="/notification" />
+		  <ul id='sortDropdown' class='dropdown-content MDC-Dropdown-size'>
+		  
+		  	<li><a href="${notificationUrl}/filter/Latest">Latest</a></li>
+		    <li><a href="${notificationUrl}/filter/Newest">Newest</a></li>
+		    <li><a href="${notificationUrl}/filter/Read">Read</a></li>
+		    <li><a href="${notificationUrl}/filter/Unread">Unread</a></li>
+		  </ul>
+    
     </div>
   </div>
 </div>
@@ -202,7 +225,7 @@
           			Read More...
           		</a>
           	</div>
-          	<a href="#" onClick="alteraStatus(${notifications.id})">
+          	<a onClick="alteraStatus(${notifications.id})" style="cursor: pointer;">
 						<c:choose>
 								<c:when test="${notifications.flRead==false}">
 							  	<i class="material-icons MDC-icon-small MDC-color-blue right">query_builder</i>

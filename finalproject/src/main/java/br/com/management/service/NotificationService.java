@@ -11,13 +11,9 @@ public interface NotificationService {
 	
 	public void update(Notification notification);
 	
-	public void deleteById(int id);
-	
-	public Notification findById(int id);
-	
-	public List<Notification> findAllByOrderByIdAsc();
-	
 	public List<Notification> findAllByUserOrderByIdAsc(User user);
+	
+	public List<Notification> findByFilter(String sortingType, User user);
 	
 	public void updateNotificationStatus(Notification notification);
 

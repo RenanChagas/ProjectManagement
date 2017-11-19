@@ -38,29 +38,29 @@ public class NotificationServiceImpl implements NotificationService {
 	public void update(Notification notification) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	@Override
-	public void deleteById(int id) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public Notification findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Notification> findAllByOrderByIdAsc() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	}	
 
 	@Override
 	public List<Notification> findAllByUserOrderByIdAsc(User user) {
 		return dao.findAllByUserOrderByIdAsc(user);
+	}
+
+	@Override
+	public List<Notification> findByFilter(String sortingType, User user) {
+		
+		switch(sortingType){
+		
+		case "Latest":
+			return dao.findAllByUserOrderByIdDesc(user);
+		case "Newest":
+			return dao.findAllByUserOrderByIdAsc(user);
+		case "Read":
+			return dao.findAllByUserAndFlReadOrderByIdDesc(user, true);
+		case "Unread":
+			return dao.findAllByUserAndFlReadOrderByIdDesc(user, false);
+		default:
+			return dao.findAllByUserOrderByIdDesc(user);
+		}
 	}
 
 }
