@@ -39,11 +39,13 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Type"/>
 <fullyQualifiedTypeName name="br.com.management.service.TaskService"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="br.com.management.dao.NotificationTypeDao"/>
 <fullyQualifiedTypeName name="br.com.management.service.NotificationService"/>
 <fullyQualifiedTypeName name="br.com.management.service.NotificationTypeService"/>
 <fullyQualifiedTypeName name="br.com.management.model.User"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="br.com.management.model.Notification"/>
+<fullyQualifiedTypeName name="br.com.management.model.SortingType"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 </qualifiedTypeNameHistroy>

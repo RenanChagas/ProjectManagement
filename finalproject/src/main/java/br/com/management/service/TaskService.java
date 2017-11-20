@@ -3,6 +3,7 @@ package br.com.management.service;
 import java.util.List;
 
 import br.com.management.model.Task;
+import br.com.management.model.User;
 
 public interface TaskService {
 	
@@ -19,5 +20,7 @@ public interface TaskService {
 	public List<Task> findAllByOrderByIdAsc();
 	
 	public List<Task> findAllByProjectIdOrderByIdAsc(int id);
+	
+	public List<Task> findAllByUser(User user);
 
 }

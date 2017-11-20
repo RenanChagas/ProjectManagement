@@ -23,6 +23,22 @@
   
   <!-- Website Logo -->
   <link rel="icon" href="<c:url value="/static/images/default/logo.png"/>">
+  
+  <script type="text/javascript">
+	  $(document).ready(function() {
+		  
+		  var completedTaskPerc = ${percCompletedTasks} + '%';
+		  var percPendingTasks = ${percPendingTasks} + '%';
+		  var percFailedTasks = ${percFailedTasks} + '%';
+		  
+		  $('#completedTasks').attr('style','width: ' + completedTaskPerc);
+		  $('#pendingTasks').attr('style','width: ' + percPendingTasks);
+		  $('#failedTasks').attr('style','width: ' + percFailedTasks);
+		  
+		  
+		  
+	  });
+  </script>
 
 </head>
 <body>
@@ -164,7 +180,7 @@
               </div>
               <div class="row center">
                 <font class="MDC-font-60 MDC-font-bold MDC-color-grey">
-                  25
+                  ${allTasks}
                 </font>
               </div>
             </div>
@@ -178,10 +194,10 @@
               </div>
               <div class="row center">
                 <font class="MDC-font-60 MDC-font-bold MDC-color-grey ">
-                  18
+                  ${completedTasks}
                 </font>
                 <div class="progress MDC-progressBar-50 MDC-margin-0 MDC-top15 MDC-background-grey-light">
-                  <div class="determinate" style="width: 70%"></div>
+                  <div id="completedTasks" class="determinate"></div>
                 </div>
               </div>
             </div>
@@ -190,15 +206,15 @@
             <div class="col l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
-                  On Going
+                  Pending
                 </font>
               </div>
               <div class="row center">
                 <font class="MDC-font-60 MDC-font-bold MDC-color-grey ">
-                  14
+                  ${pendingTasks}
                 </font>
                 <div class="progress MDC-progressBar-50 MDC-margin-0 MDC-top15 MDC-background-grey-light">
-                  <div class="determinate yellow darken-2" style="width: 40%"></div>
+                  <div id="pendingTasks" class="determinate yellow darken-2"></div>
                 </div>
               </div>
             </div>
@@ -207,15 +223,15 @@
             <div class="col l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
-                  Overdue
+                  Failed
                 </font>
               </div>
               <div class="row center">
                 <font class="MDC-font-60 MDC-font-bold MDC-color-grey ">
-                  7
+                  ${failedTasks}
                 </font>
                 <div class="progress MDC-progressBar-50 MDC-margin-0 MDC-top15 MDC-background-grey-light">
-                  <div class="determinate red darken-1" style="width: 20%"></div>
+                  <div id="failedTasks" class="determinate red darken-1"></div>
                 </div>
               </div>
             </div>
@@ -233,32 +249,35 @@
           <div class="MDC-card-news-container">
 
             <div>
-                <canvas class="MDC-margin-top20" id="chartjs-0" width="100" height="320"></canvas>
+                <canvas class="MDC-margin-top20" id="chartjs-Months" width="100" height="320"></canvas>
             </div>
-            <script>
-            new Chart(document.getElementById("chartjs-0"), {
+            <script type="text/javascript">
+          
+           
+            new Chart(document.getElementById("chartjs-Months"), {
+            	
               type: 'line',
               data: {
-                labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+                labels: ["" + "${months[4]}" + "", "" + "${months[3]}" + "", "" + "${months[2]}" + "", "" + "${months[1]}" + "", "" + "${months[0]}" + ""],
                 datasets: [
                   {
                     label: "Tasks Completed",
                     borderColor: "#2196F3",
-                    data: [15,9,30,32,21],
+                    data: ["" + "${completedTasksNumber[4]}" + "","" + "${completedTasksNumber[3]}" + "","" + "${completedTasksNumber[2]}" + "","" + "${completedTasksNumber[1]}" + "", "" + "${completedTasksNumber[0]}" + ""],
                     fill: false,
                     lineTension: 0.2
                   },
                   {
-                    label: "Tasks Ovedue",
+                    label: "Tasks Failed",
                     borderColor: "#e53935",
-                    data: [2,6,2,8,14],
+                    data: ["" + "${failedTasksNumber[4]}" + "","" + "${failedTasksNumber[3]}" + "","" + "${failedTasksNumber[2]}" + "","" + "${failedTasksNumber[1]}" + "", "" + "${failedTasksNumber[0]}" + ""],
                     fill: false,
                     lineTension: 0.2
                   },
                   {
-                    label: "Tasks On Going",
+                    label: "Tasks Pending",
                     borderColor: "#fbc02d",
-                    data: [9,2,7,17,19],
+                    data: ["" + "${pendingTasksNumber[4]}" + "","" + "${pendingTasksNumber[3]}" + "","" + "${pendingTasksNumber[2]}" + "","" + "${pendingTasksNumber[1]}" + "", "" + "${pendingTasksNumber[0]}" + ""],
                     fill: false,
                     lineTension: 0.2
                   }  
@@ -298,7 +317,7 @@
           <!-- Task Title -->
           <div class="row center MDC-margin-top10">
             <font class="truncate MDC-font-15 MDC-color-grey-dark-2 MDC-font-h1">
-                Task Category
+                Task Type
               </font>
           </div>
 
@@ -309,21 +328,19 @@
               <div class="MDC-margin-right20 MDC-margin-left20">
                   <canvas class="MDC-margin-top20 center" id="chartjs-doughnut" width="10" height="10"></canvas>
               </div>
-              <script>
+              <script type="text/javascript">
               new Chart(document.getElementById("chartjs-doughnut"), {
                 type: 'doughnut',
                 data: {
-                  labels: ["Documentation", "Programming", "Test"],
+                  labels: ["Bug", "Test"],
                   datasets: [ {
                     data: [
-                      40,
-                      20,
-                      10
+                      "" + "${taskTypeBug}" + "",
+                      "" + "${taskTypeTest}" + ""
                     ],
                     backgroundColor: [
-                    "#2196F3",
-                    "#2196F3",
-                    "#2196F3",
+                    "#e53935",
+                    "#00b39f",
                     ],
                     label: ""
                   }]
@@ -331,6 +348,7 @@
                 "options":{
                   "legend": {
                     display: false,
+                    top: "50",
                     position: "bottom"
                   },
                   animation: {
@@ -351,7 +369,7 @@
           <div class="row center MDC-margin-bottom-10">
             <font class="truncate MDC-font-16-2 MDC-color-grey MDC-font-h1
                         MDC-uppercase-none">
-               Overview
+               ${months[0]}
             </font>
           </div>
 

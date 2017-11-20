@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import br.com.management.model.Task;
+import br.com.management.model.User;
 
 @Repository("TaskDao")
 public interface TaskDao extends JpaRepository<Task, Long>{
@@ -19,6 +20,8 @@ public interface TaskDao extends JpaRepository<Task, Long>{
 	public List<Task> findAllByOrderByIdAsc();
 	
 	public List<Task> findAllByProjectIdOrderByIdAsc(int id);
+	
+	public List<Task> findAllByUser(User user);
 	
 	@Transactional
 	public void deleteById(int id);

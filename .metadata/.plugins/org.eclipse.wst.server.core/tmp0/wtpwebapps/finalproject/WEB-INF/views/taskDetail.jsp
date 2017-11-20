@@ -121,7 +121,7 @@
                         menu
                       </i>
                     </a>
-                    <li class="MDC-navbar-menu"><a href="dashboard">Dashboard</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/projects">Projects</a></li>
                     <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
