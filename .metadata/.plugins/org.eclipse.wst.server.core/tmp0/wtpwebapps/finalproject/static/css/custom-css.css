@@ -494,10 +494,21 @@ nav ul li a.MDC-navbar-active {
 .MDC-sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
     display: block;
     transition: 0.3s
+    color: #C4C7CB !important;
+  	font-size: 15px;
+  	font-style: normal;
+  	font-weight: bold;
+  	font-feature-settings: 'kern';
+  	font-family: "Roboto","sans-serif";
+  	letter-spacing: 0.15px;
+  	opacity: 1;
+  	-webkit-font-smoothing: antialiased;
+  	text-transform: uppercase;
+  	text-overflow: ellipsis;
+  	overflow: visible !important;
+  	transition: color .28s ease;
 }
 
 .MDC-sidenav a:hover, .offcanvas a:focus{
@@ -508,7 +519,7 @@ nav ul li a.MDC-navbar-active {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px !important;
+    font-size: 20px !important;
     margin-left: 50px;
 }
 
@@ -616,8 +627,8 @@ nav ul li a.MDC-navbar-active {
 
 @media only screen and (max-width: 992px){
   .MDC-page-container{
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 30px !important;
+    padding-right: 10px !important;
   }
 }
 
@@ -875,6 +886,8 @@ nav ul li a.MDC-navbar-active {
   height: 350px;
   position: relative;
 }
+
+
 
 .MDC-dashboard-doughtnut-size{
   width: 200px !important;
@@ -1199,10 +1212,38 @@ nav ul li a.MDC-navbar-active {
 /* DASHBOARD - PAGE                                */
 /*-------------------------------------------------*/
 
-.MDC-dashboard-card-size{
+@media only screen and (max-width: 600px) {
+	.MDC-dashboard-card-size {
   width: 100%;
-  height: 170px;
+  height: 570px;
   position: relative;
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+	.MDC-dashboard-card-size {
+  width: 100%;
+  height: 300px;
+  position: relative;
+	}
+}
+
+@media only screen and (min-width: 993px){
+	.MDC-dashboard-card-size{
+	  width: 100%;
+	  height: 170px;
+	  position: relative;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.MDC-dashboard-taskType {
+  	width: auto;
+  	height: auto;
+  	position: relative;
+  	margin-right: 40px !important;
+  	padding-bottom: 20px;
+	}
 }
 
 .MDC-dashboardGraphics-card-size{

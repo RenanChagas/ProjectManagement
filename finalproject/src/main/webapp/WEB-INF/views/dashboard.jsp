@@ -35,8 +35,24 @@
 		  $('#pendingTasks').attr('style','width: ' + percPendingTasks);
 		  $('#failedTasks').attr('style','width: ' + percFailedTasks);
 		  
-		  
-		  
+			//Window refresh
+			if ($(window).width() <= 600) {
+		      $("#MDC-dashboard-taskType").removeClass('right');
+		  }
+			
+			if ($(window).width() >= 600) {
+				$("#MDC-dashboard-taskType").addClass('right');
+			}
+			
+	  });
+	  
+	  $(window).resize(function() {
+		  if ($(window).width() <= 600) {
+		      $("#MDC-dashboard-taskType").removeClass('right');
+		  }
+		  else if ($(window).width() >= 600) {
+				$("#MDC-dashboard-taskType").addClass('right');
+			}
 	  });
   </script>
 
@@ -89,7 +105,6 @@
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
 	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
@@ -122,17 +137,19 @@
                     </a>
                     <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                       </a>
                     </li>
                   </ul>
                   <div id="mySidenav" class="MDC-sidenav">
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="${contextPath}/dashboard">Dashboard</a>
+                    <a href="${contextPath}/projects">Projects</a>
+                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/notification">Notifications</a>
+                    <a href="${contextPath}/profile">Profile</a>
+                    <a href="${contextPath}/logout">Logout</a>
                   </div>
 
                 </div>
@@ -150,9 +167,9 @@
   <div class="row  MDC-page-center MDC-page-container">
     <div class="col MDC-padding-0 left">
       <div class="MDC-page-title-size">
-        <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline">Dashboard</font>
+        <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Dashboard</font>
         <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
-                     MDC-news-counterBar-position">/
+                     MDC-news-counterBar-position hide-on-small-and-down">/
         </font>
         <font class="MDC-h5-style MDC-color-blue MDC-display-inline">${user.username}</font>
         <i class="material-icons MDC-icon-small MDC-color-blue
@@ -172,7 +189,7 @@
           <div class="MDC-card-news-container">
 
             <!-- All Courses -->
-            <div class="col l3">
+            <div class="col s12 m6 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   All Tasks
@@ -186,7 +203,7 @@
             </div>
 
             <!-- Completed Courses -->
-            <div class="col l3">
+            <div class="col s12 m6 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   Completed
@@ -203,7 +220,7 @@
             </div>
 
             <!-- Missing Courses -->
-            <div class="col l3">
+            <div class="col s12 m6 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   Pending
@@ -220,7 +237,7 @@
             </div>
 
             <!-- Overdue Courses -->
-            <div class="col l3">
+            <div class="col s12 m6 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   Failed
@@ -244,12 +261,12 @@
 
     <!-- Graphics -->
     <div class="row">
-      <div class="col l9 MDC-padding-0 MDC-margin-right40">
+      <div class="col l9 MDC-padding-0  hide-on-med-and-down left">
         <div class="MDC-card MDC-dashboardGraphics-card-size">
           <div class="MDC-card-news-container">
 
             <div>
-                <canvas class="MDC-margin-top20" id="chartjs-Months" width="100" height="320"></canvas>
+                <canvas class="MDC-margin-top20 " id="chartjs-Months" width="100" height="320"></canvas>
             </div>
             <script type="text/javascript">
           
@@ -311,8 +328,8 @@
       </div>
 
       <!-- Courses -->
-      <div class="col MDC-padding-0 right">
-        <div class="MDC-card MDC-course-card-size">
+      <div class="col s12 m6 l3 MDC-padding-0 right">
+        <div id="MDC-dashboard-taskType" class="MDC-card MDC-course-card-size right MDC-dashboard-taskType">
 
           <!-- Task Title -->
           <div class="row center MDC-margin-top10">
@@ -324,7 +341,6 @@
           <!-- Image -->
           <a href="#">
             <div class="row center MDC-margin-top20">
-
               <div class="MDC-margin-right20 MDC-margin-left20">
                   <canvas class="MDC-margin-top20 center" id="chartjs-doughnut" width="10" height="10"></canvas>
               </div>
@@ -359,9 +375,6 @@
               });
 
               </script>
-              <!--
-              <img src="images/temp/man-profile-circle-4.png"
-                class="MDC-avatar-circle-large MDC-shadow-default"/> -->
             </div>
           </a>
 

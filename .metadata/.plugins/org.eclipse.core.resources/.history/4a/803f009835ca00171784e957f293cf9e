@@ -1,7 +1,0 @@
-package br.com.management.service.impl;
-
-import br.com.management.service.NotificationService;
-
-public class NotificationTypeServiceImpl implements NotificationTypeService{
-
-}

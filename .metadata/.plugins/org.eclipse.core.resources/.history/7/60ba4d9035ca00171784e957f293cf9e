@@ -1,5 +1,0 @@
-package br.com.management.service.impl;
-
-public class NotificationTypeServiceImpl {
-
-}
