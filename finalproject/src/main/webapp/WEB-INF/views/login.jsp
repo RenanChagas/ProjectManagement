@@ -46,14 +46,16 @@
         <div class="col s12">
           <div class="input-field invalid MDC-color-grey-dark-2 MDC-login-form-size">
             <div class="material-icons MDC-login-icon-position prefix">account_circle</div>
-            <input type="text" id="username" name="username" placeholder="Username" class="validate MDC-form-text MDC-color-grey-dark-2 MDC-font-15 MDC-font-weight-300">
+            <input type="text" id="username" name="username" placeholder="Username" class="validate MDC-form-text 
+            	MDC-color-grey-dark-2 MDC-font-15 MDC-font-weight-300 MDC-form-size-login">
           </div>
         </div>
         <!-- Password -->
         <div class="col s12">
           <div class="input-field invalid MDC-color-grey-dark-2 MDC-login-form-size">
             <div class="material-icons MDC-login-icon-position prefix">lock_outline</div>
-            <input type="password" id="password" name="password" placeholder="Password" class="validate MDC-form-text MDC-color-grey-dark-2 MDC-font-15 MDC-font-weight-300">
+            <input type="password" id="password" name="password" placeholder="Password" class="validate MDC-form-text 
+            	MDC-color-grey-dark-2 MDC-font-15 MDC-font-weight-300 MDC-form-size-login">
           	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
           </div>
         </div>
@@ -68,7 +70,7 @@
         </div>
       </form>
       <!-- Form - END -->
-      <div class="right">
+      <div class="center">
         <div class="row MDC-margin-top20">
           <div class="col s12">
             <div class="MDC-color-grey-dark-2 MDC-login-form-size center-align MDC-font-15 MDC-font-weight-300">

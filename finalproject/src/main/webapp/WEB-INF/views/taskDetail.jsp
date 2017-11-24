@@ -131,10 +131,12 @@
                   </ul>
                   <div id="mySidenav" class="MDC-sidenav">
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="${contextPath}/dashboard">Dashboard</a>
+                    <a href="${contextPath}/projects">Projects</a>
+                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/notification">Notifications</a>
+                    <a href="${contextPath}/profile">Profile</a>
+                    <a href="${contextPath}/logout">Logout</a>
                   </div>
 
                 </div>
@@ -210,7 +212,7 @@
                             <div class="file-path-wrapper">
 	                            <input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
 	                            	MDC-font-weight-300 MDC-maxSize-60perc"
-	                            	type="text" placeholder="Upload one or more files">
+	                            	type="text" placeholder="Upload files">
                            	</div>
                     	</div>
                     	<!-- File Upload-END-->
@@ -282,7 +284,7 @@
                         	<div class="file-path-wrapper">
                         		<input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
                             		MDC-font-weight-300 MDC-maxSize-60perc"
-                                	type="text" placeholder="Upload one or more files">
+                                	type="text" placeholder="Upload files">
                     		</div>
                 		</div>
                 		
@@ -325,10 +327,10 @@
       
             <button id="salvar" type="submit" class="btn waves-effect waves-light
 	        		blue MDC-form-text right" name="action">
-	        		Save Changes
+	        		Save
 	        	</button>
 	        	<a  href="<c:url value="/deleteTask?id=${task.id}" />"
-							class="waves-effect waves-light btn red left">Delete Task</a>
+							class="waves-effect waves-light btn red left">Delete</a>
         </div>
         <!-- CONTEUDO -->
 	</div>

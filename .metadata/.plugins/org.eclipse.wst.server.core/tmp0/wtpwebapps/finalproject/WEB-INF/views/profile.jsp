@@ -27,6 +27,17 @@
 
   $(document).ready(function(){
 	  
+	  
+		//Window refresh
+		if ($(window).width() <= 1111) {
+	      $("#avatar-div").addClass('center');
+	  }
+		
+		if ($(window).width() >= 1112) {
+			$("#avatar-div").removeClass('center');
+		}
+	  
+	  
 	  $('#uploadAvatar').click(function(e){
 		  	e.preventDefault();
 		    $('#input-avatar').trigger('click');
@@ -35,6 +46,15 @@
 		    $('#form-avatar').submit();
 	  });
 	  
+  });
+  
+  $(window).resize(function() {
+	  if ($(window).width() <= 1111) {
+		  $("#avatar-div").addClass('center');
+	  }
+	  else if ($(window).width() >= 1112) {
+		  $("#avatar-div").removeClass('center');
+		}
   });
 				
   </script>	    		
@@ -120,7 +140,7 @@
                         menu
                       </i>
                     </a>
-                    <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
+                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
                     <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
@@ -129,10 +149,12 @@
                   </ul>
                   <div id="mySidenav" class="MDC-sidenav">
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="${contextPath}/dashboard">Dashboard</a>
+                    <a href="${contextPath}/projects">Projects</a>
+                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/notification">Notifications</a>
+                    <a href="${contextPath}/profile">Profile</a>
+                    <a href="${contextPath}/logout">Logout</a>
                   </div>
 
                 </div>
@@ -150,7 +172,7 @@
   <div class="row  MDC-page-center MDC-page-container">
     <div class="col MDC-padding-0 left">
       <div class="MDC-page-title-size">
-        <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline">Profile</font>
+        <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline ">Profile</font>
         <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
                      MDC-news-counterBar-position">/
         </font>
@@ -168,7 +190,7 @@
 
       <!-- AVATAR LEFT -->   
       <form id="form-avatar" method="POST" action="uploadFile" enctype="multipart/form-data">   
-      <div class="col s12 m5 l3 MDC-padding-0">
+      <div id="avatar-div" class="col s12 m12 l3 MDC-padding-0 MDC-profile-margin-bottom">
         <a id="uploadAvatar" class="btn-floating btn waves-effect MDC-absolute
                                   MDC-profile-add-position right">
           <i class="material-icons">add</i>

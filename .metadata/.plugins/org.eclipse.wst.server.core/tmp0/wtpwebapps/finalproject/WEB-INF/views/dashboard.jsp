@@ -44,8 +44,6 @@
 				$("#MDC-dashboard-taskType").addClass('right');
 			}
 			
-		  
-		  
 	  });
 	  
 	  $(window).resize(function() {
@@ -331,7 +329,7 @@
 
       <!-- Courses -->
       <div class="col s12 m6 l3 MDC-padding-0 right">
-        <div id="MDC-dashboard-taskType" class="MDC-card MDC-course-card-size right MDC-dashboard-taskType">
+        <div id="MDC-dashboard-taskType" class="MDC-card MDC-course-card-size right MDC-dashboard-taskType MDC-dashboard-padding-bottom">
 
           <!-- Task Title -->
           <div class="row center MDC-margin-top10">

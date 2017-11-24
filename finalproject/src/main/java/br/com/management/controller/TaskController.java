@@ -66,7 +66,7 @@ public class TaskController {
 		
 		model.addAttribute("task", task);
 		model.addAttribute("project", project);
-		model.addAttribute("user",new User());
+		model.addAttribute("user2",new User());
 		return "taskCreate";
 	}
 	

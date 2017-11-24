@@ -82,7 +82,6 @@
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
 	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
@@ -123,12 +122,13 @@
                   </ul>
                   <div id="mySidenav" class="MDC-sidenav">
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="${contextPath}/dashboard">Dashboard</a>
+                    <a href="${contextPath}/projects">Projects</a>
+                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/notification">Notifications</a>
+                    <a href="${contextPath}/profile">Profile</a>
+                    <a href="${contextPath}/logout">Logout</a>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -144,9 +144,9 @@
 <div class="row  MDC-page-center MDC-page-container">
   <div class="col MDC-padding-0 left">
     <div class="MDC-page-title-size">
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline">Projects</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Projects</font>
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
-                   MDC-news-counterBar-position">/
+                   MDC-news-counterBar-position hide-on-small-and-down">/
       </font>
       <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Latest</font>
       <i class="material-icons MDC-icon-small MDC-color-blue
@@ -182,7 +182,7 @@
 			</c:choose>
 		
 			<!-- Project -->
-			<div class="col MDC-padding-0 MDC-margin-right40 MDC-margin-bottom30">
+			<div class="col s12 m6 l3 MDC-padding-0 MDC-margin-bottom30 MDC-margin-card-Tablet">
 				<!-- CARD -->
 				<div class="MDC-card MDC-course-card-size"  onclick="<t:url value="/projects/tasks?id=${projects.id}" />">
 					<!-- float btn -->

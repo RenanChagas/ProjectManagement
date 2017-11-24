@@ -111,8 +111,8 @@
                       </i>
                     </a>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
-                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
+                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="#!">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                       
                       </a>
@@ -120,10 +120,12 @@
                   </ul>
                   <div id="mySidenav" class="MDC-sidenav">
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="${contextPath}/dashboard">Dashboard</a>
+                    <a href="${contextPath}/projects">Projects</a>
+                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/notification">Notifications</a>
+                    <a href="${contextPath}/profile">Profile</a>
+                    <a href="${contextPath}/logout">Logout</a>
                   </div>
 
                 </div>
@@ -142,13 +144,13 @@
 	<!-- TITLE -->	
   <div class="col MDC-padding-0 left">
     <div class="MDC-page-title-size">
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline">Projects</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Projects</font>
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
-                   MDC-news-counterBar-position">/
+                   MDC-news-counterBar-position hide-on-small-and-down">/
       </font>
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline">${project.projectName}</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">${project.projectName}</font>
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
-                   MDC-news-counterBar-position">/
+                   MDC-news-counterBar-position hide-on-small-and-down">/
       </font>
       <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Latest</font>
       <i class="material-icons MDC-icon-small MDC-color-blue
@@ -177,7 +179,7 @@
     <div class="MDC-center-container MDC-margin-left120">
         <div class="row">
             <!-- TEST -->
-            <div class="col s6 MDC-padding-0 MDC-margin-right80 MDC-modal-max-size left">
+            <div class="col s12 m6 l6 MDC-padding-0 MDC-modal-margin MDC-modal-max-size left">
                 <!-- Image -->
                 <a href="#">
                     <div class="row center MDC-margin-top20">
@@ -206,7 +208,7 @@
             </div>
             <!-- TEST-END-->
             <!-- BUG -->
-            <div class="col s6 MDC-padding-0 MDC-margin-right80 MDC-modal-max-size right">
+            <div class="col col s12 m6 l6 MDC-padding-0 MDC-modal-margin MDC-modal-max-size right">
                 <!-- Image -->
                 <a href="#">
                     <div class="row center MDC-margin-top20">

@@ -131,10 +131,12 @@
                   </ul>
                   <div id="mySidenav" class="MDC-sidenav">
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+                    <a href="${contextPath}/dashboard">Dashboard</a>
+                    <a href="${contextPath}/projects">Projects</a>
+                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/notification">Notifications</a>
+                    <a href="${contextPath}/profile">Profile</a>
+                    <a href="${contextPath}/logout">Logout</a>
                   </div>
 
                 </div>
@@ -152,13 +154,13 @@
 <div class="row  MDC-page-center MDC-page-container">
   <div class="col MDC-padding-0 left">
     <div class="MDC-page-title-size">
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline">Projects</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Projects</font>
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
-                   MDC-news-counterBar-position">/
+                   MDC-news-counterBar-position hide-on-small-and-down">/
       </font>
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline">${project.projectName}</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">${project.projectName}</font>
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
-                   MDC-news-counterBar-position">/
+                   MDC-news-counterBar-position hide-on-small-and-down">/
       </font>
       <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Overview</font>
     </div>
@@ -178,10 +180,10 @@
                 	<a class="active MDC-color-grey-dark-2 breadcrumb" href="#overview-tab">Overview</a>
                 </li>
                 <li class="tab col s4 MDC-background-color MDC-display-flex">
-                    <a class="MDC-color-grey-dark-2 breadcrumb" href="#chooseIcon-tab">Project Icon</a>
+                    <a class="MDC-color-grey-dark-2 breadcrumb" href="#chooseIcon-tab">Icon</a>
                 </li>
                 <li class="tab col s4 MDC-background-color MDC-display-flex">
-                	<a class="MDC-color-grey-dark-2 breadcrumb" href="#finish-tab">Finish Project</a>
+                	<a class="MDC-color-grey-dark-2 breadcrumb" href="#finish-tab">Finish</a>
                 </li>
 			</ul>
             <!-- TABS-END -->
@@ -231,7 +233,7 @@
                             <div class="file-path-wrapper">
 	                            <input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
 	                            	MDC-font-weight-300 MDC-maxSize-60perc"
-	                            	type="text" placeholder="Upload one or more files">
+	                            	type="text" placeholder="Upload files">
                            	</div>
                     	</div>
                     	<!-- File Upload-END-->
@@ -253,7 +255,7 @@
                         <!-- Links-END-->
                     	<!-- Due date -->
                         <div class="row MDC-margin-bottom30">
-	                        <div class="col MDC-maxSize-300">
+	                        <div id="dueDateDiv" class="col MDC-maxSize-300">
 	                        	<label for="datepicker1">Due Date</label>
 	                        		<form:input id="datepicker1" type="date" path="dueDate" 
 	                        			value=""
@@ -458,7 +460,7 @@
                         	<div class="file-path-wrapper">
                         		<input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
                             		MDC-font-weight-300 MDC-maxSize-60perc"
-                                	type="text" placeholder="Upload one or more files">
+                                	type="text" placeholder="Upload files">
                     		</div>
                 		</div>
                      	<!-- Status -->
@@ -483,10 +485,10 @@
 			<!-- FINISH TAB -->
 			<button id="salvar" type="submit" class="btn waves-effect waves-light
 	        blue MDC-form-text right" name="action">
-	        Save Changes
+	        Save
 	        </button>
 	       	<a  href="<c:url value="/deleteProject?id=${project.id}" />"
-				class="waves-effect waves-light btn red left">Delete Project</a>
+				class="waves-effect waves-light btn red left">Delete</a>
         </div>
         <!-- CONTEUDO -->
 	</div>
