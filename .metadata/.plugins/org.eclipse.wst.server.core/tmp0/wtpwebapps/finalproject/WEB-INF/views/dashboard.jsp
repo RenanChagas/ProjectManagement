@@ -137,7 +137,7 @@
                     </a>
                     <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="${contextPath}/myTasks">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/task/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                       </a>
                     </li>

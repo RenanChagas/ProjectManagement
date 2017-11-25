@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import br.com.management.dao.NotificationDao;
 import br.com.management.dao.TaskDao;
 import br.com.management.model.Notification;
 import br.com.management.model.Task;
@@ -26,6 +27,9 @@ public class TaskServiceImpl implements TaskService{
 	
 	@Autowired
 	private NotificationTypeService notificationTypeService;
+	
+	@Autowired
+	private NotificationDao notificationDao;
 
 	@Override
 	public void save(Task task) {
@@ -75,7 +79,8 @@ public class TaskServiceImpl implements TaskService{
 
 	@Override
 	public void deleteById(int id) {
-		// TODO Auto-generated method stub
+		notificationDao.deleteInBatch(notificationService.findAllByTaskOrderByIdAsc(dao.findAllById(id)));
+		dao.deleteInBatch(dao.findAllById(id));
 		
 	}
 

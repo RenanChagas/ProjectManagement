@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import br.com.management.model.Notification;
+import br.com.management.model.Task;
 import br.com.management.model.User;
 
 @Repository("NotificationDao")
@@ -18,6 +19,8 @@ public interface NotificationDao extends JpaRepository<Notification, Long>{
 	public List<Notification> findAllByOrderByIdAsc();
 	
 	public List<Notification> findAllByTaskIdOrderByIdAsc(int id);
+	
+	public List<Notification> findAllByTaskOrderByIdAsc(List<Task> task);
 	
 	//Newest
 	public List<Notification> findAllByUserOrderByIdAsc(User user);

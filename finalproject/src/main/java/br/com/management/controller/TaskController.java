@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -48,7 +50,6 @@ public class TaskController {
 		return userService.findAllByOrderByIdAsc();
 	}
 	
-	
 	@RequestMapping(value = "/projects/tasks", method = RequestMethod.GET)
 	public String list(@RequestParam("id") int projectId, Model model){
 		Project project = projectService.findById(projectId);
@@ -57,6 +58,12 @@ public class TaskController {
 		model.addAttribute("task", taskService.findAllByProjectIdOrderByIdAsc(projectId));
 		model.addAttribute("project", project);
 		return "tasks";
+	}
+	
+	@RequestMapping(value = "/task/myTasks", method = RequestMethod.GET)
+	public String myTask(Model model){
+		model.addAttribute("task", taskService.findAllByUser(getUserName()));
+		return "myTasks";
 	}
 	
 	@RequestMapping(value = "/task/create", method = RequestMethod.GET)
@@ -125,6 +132,21 @@ public class TaskController {
 		
 		
 		atributes.addAttribute("id", search.getProject().getId());
+		return "redirect:/projects/tasks?";
+	}
+	
+	@RequestMapping(value = "/deleteTask")
+	public String deleteTask(@Valid Task task,
+			BindingResult result, ModelMap model, RedirectAttributes atributes){
+		
+		Task deleteTask = new Task();
+		deleteTask = taskService.findById(task.getId());
+		
+		
+		atributes.addAttribute("id", deleteTask.getProject().getId());
+		System.out.println("Task Deletado: " +deleteTask.toString());
+		taskService.deleteById(deleteTask.getId());
+		
 		return "redirect:/projects/tasks?";
 	}
 	

@@ -32,7 +32,7 @@ public class Notification {
     private NotificationType notificationType;
 	
 	@ManyToOne(fetch=FetchType.EAGER, optional = false)
-	@JoinColumn(name="TASK_ID",referencedColumnName="id")  
+	@JoinColumn(name="TASK_ID",referencedColumnName="id") 
     private Task task;
 	
 	@ManyToOne(fetch=FetchType.EAGER, optional = false)

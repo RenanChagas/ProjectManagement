@@ -61,7 +61,7 @@ public class Project {
 	@Column(name="STATE_ICON")
 	private String stateIcon;
 	
-	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL,mappedBy="project", targetEntity = Task.class)
+	@OneToMany(fetch=FetchType.EAGER, cascade= {CascadeType.PERSIST, CascadeType.REMOVE} ,mappedBy="project", targetEntity = Task.class)
     public List<Task> task;
 
 	public int getId() {

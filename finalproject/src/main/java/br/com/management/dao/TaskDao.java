@@ -17,6 +17,8 @@ public interface TaskDao extends JpaRepository<Task, Long>{
 	
 	public Task findByName(String name);
 	
+	public List<Task> findAllById(int id);
+	
 	public List<Task> findAllByOrderByIdAsc();
 	
 	public List<Task> findAllByProjectIdOrderByIdAsc(int id);

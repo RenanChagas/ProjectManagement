@@ -3,6 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="t" uri="http://www.springframework.org/tags"%>  
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+ <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -486,9 +487,16 @@
 			<button id="salvar" type="submit" class="btn waves-effect waves-light
 	        blue MDC-form-text right" name="action">
 	        Save
-	        </button>
-	       	<a  href="<c:url value="/deleteProject?id=${project.id}" />"
-				class="waves-effect waves-light btn red left">Delete</a>
+	        </button>	
+	        <sec:authorize access="hasRole('Admin')">
+			    	<a  href="<c:url value="/deleteProject?id=${project.id}" />"
+							class="waves-effect waves-light btn red left">Delete Project</a>
+			    </sec:authorize>
+			    <c:if test="${project.createUser}==${user.username}">
+			       <a  href="<c:url value="/deleteProject?id=${project.id}" />"
+							class="waves-effect waves-light btn red left">Delete Project</a>
+			    </c:if>
+	
         </div>
         <!-- CONTEUDO -->
 	</div>

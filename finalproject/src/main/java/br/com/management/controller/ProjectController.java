@@ -114,12 +114,11 @@ public class ProjectController {
 			
 		Project deleteProject = new Project();
 		deleteProject = projectService.findById(project.getId());
-		System.out.println("Projet: " +deleteProject);
+		System.out.println("Projeto: " +deleteProject);
 		projectService.deleteById(deleteProject.getId());
 		
-		return "redirect:/projects";	
+		return "redirect:/projects";
 	}
-	
 	
 	private String getPrincipal(){
 		String userName = null;

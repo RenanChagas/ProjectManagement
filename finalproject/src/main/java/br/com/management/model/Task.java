@@ -79,7 +79,7 @@ public class Task {
 	@JoinColumn(name="USER_ID",referencedColumnName="id")  
     private User user;
 	
-	@OneToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL,mappedBy="task", targetEntity = Notification.class)
+	@OneToMany(fetch=FetchType.EAGER, cascade= {CascadeType.PERSIST, CascadeType.REMOVE} ,mappedBy="task", targetEntity = Notification.class)
     public List<Notification> notification;
 	
 	public int getId() {

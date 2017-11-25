@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import br.com.management.dao.NotificationDao;
 import br.com.management.model.Notification;
+import br.com.management.model.Task;
 import br.com.management.model.User;
 import br.com.management.service.NotificationService;
 
@@ -61,6 +62,12 @@ public class NotificationServiceImpl implements NotificationService {
 		default:
 			return dao.findAllByUserOrderByIdDesc(user);
 		}
+	}
+	
+
+	@Override
+	public List<Notification> findAllByTaskOrderByIdAsc(List<Task> task) {
+		return dao.findAllByTaskOrderByIdAsc(task);
 	}
 
 }

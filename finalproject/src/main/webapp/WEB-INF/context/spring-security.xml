@@ -6,13 +6,10 @@
     http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
 
     <http auto-config="true" >
-    	<access-denied-handler error-page="/accessDenied" />
-        <intercept-url pattern="/" access="hasRole('User') or hasRole('Admin') or hasRole('Manager')" />
-        <intercept-url pattern="/home" access="hasRole('User') or hasRole('Admin') or hasRole('Manager')" />
-        <intercept-url pattern="/admin/**" access="hasRole('Admin')" />
-        <intercept-url pattern="/manager/**" access="hasRole('Admin') or hasRole('Manager')" />
+    	
+    		<intercept-url pattern="/login" access="permitAll" /> 
+				<intercept-url pattern="/*" access="isAuthenticated()" /> 
         
-        <intercept-url pattern="/dba**" access="hasRole('Admin') and hasRole('Manager')" />
         <form-login  login-page="/login" 
         			 username-parameter="username" 
         			 password-parameter="password" 
