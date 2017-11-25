@@ -183,13 +183,14 @@
   <!-- RESUME CONTAINER -->
   <div class="MDC-page-center MDC-page-container">
     <!-- RESUME CONTENT -->
+    
     <div class="row MDC-page-margin-top">
-      <div class="col l12 MDC-padding-0 MDC-margin-right40">
+      <div class="col s12 m12 l12 MDC-padding-0 MDC-margin-right40">
         <div class="MDC-card MDC-dashboard-card-size">
           <div class="MDC-card-news-container">
 
             <!-- All Courses -->
-            <div class="col s12 m6 l3">
+            <div class="col s12 m3 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   All Tasks
@@ -203,7 +204,7 @@
             </div>
 
             <!-- Completed Courses -->
-            <div class="col s12 m6 l3">
+            <div class="col s12 m3 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   Completed
@@ -220,7 +221,7 @@
             </div>
 
             <!-- Missing Courses -->
-            <div class="col s12 m6 l3">
+            <div class="col s12 m3 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   Pending
@@ -237,7 +238,7 @@
             </div>
 
             <!-- Overdue Courses -->
-            <div class="col s12 m6 l3">
+            <div class="col s12 m3 l3">
               <div class="row center">
                 <font class="MDC-font-22 MDC-color-grey-dark-2">
                   Failed
@@ -261,7 +262,7 @@
 
     <!-- Graphics -->
     <div class="row">
-      <div class="col l9 MDC-padding-0  hide-on-med-and-down left">
+      <div class="col m9 l9 MDC-padding-0  hide-on-small-and-down left">
         <div class="MDC-card MDC-dashboardGraphics-card-size">
           <div class="MDC-card-news-container">
 
@@ -328,8 +329,8 @@
       </div>
 
       <!-- Courses -->
-      <div class="col s12 m6 l3 MDC-padding-0 right">
-        <div id="MDC-dashboard-taskType" class="MDC-card MDC-course-card-size right MDC-dashboard-taskType MDC-dashboard-padding-bottom">
+      <div class="col s12 m2 l3 MDC-padding-0 right">
+        <div id="MDC-dashboard-taskType" class="MDC-card MDC-dashboardTask-card-size right MDC-dashboard-taskType MDC-dashboard-padding-bottom">
 
           <!-- Task Title -->
           <div class="row center MDC-margin-top10">
