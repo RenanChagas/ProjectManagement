@@ -22,5 +22,11 @@ public interface TaskService {
 	public List<Task> findAllByProjectIdOrderByIdAsc(int id);
 	
 	public List<Task> findAllByUser(User user);
+	
+	//Filter My Task
+	public List<Task> findMyTaskByFilter(String sortingType, User user);
+	
+	//Filter Project Tasks
+	public List<Task> findProjectTasksByFilter(String sortingType, int id);
 
 }

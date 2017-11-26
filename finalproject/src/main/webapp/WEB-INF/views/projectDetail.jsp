@@ -92,7 +92,6 @@
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
 	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
@@ -125,7 +124,7 @@
                     </a>
                     <li class="MDC-navbar-menu"><a href="dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/task/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                       </a>
                     </li>
@@ -134,7 +133,7 @@
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
                     <a href="${contextPath}/dashboard">Dashboard</a>
                     <a href="${contextPath}/projects">Projects</a>
-                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/task/myTasks">My Tasks</a>
                     <a href="${contextPath}/notification">Notifications</a>
                     <a href="${contextPath}/profile">Profile</a>
                     <a href="${contextPath}/logout">Logout</a>
@@ -487,16 +486,18 @@
 			<button id="salvar" type="submit" class="btn waves-effect waves-light
 	        blue MDC-form-text right" name="action">
 	        Save
-	        </button>	
+	        </button>
 	        <sec:authorize access="hasRole('Admin')">
 			    	<a  href="<c:url value="/deleteProject?id=${project.id}" />"
 							class="waves-effect waves-light btn red left">Delete Project</a>
 			    </sec:authorize>
-			    <c:if test="${project.createUser}==${user.username}">
-			       <a  href="<c:url value="/deleteProject?id=${project.id}" />"
-							class="waves-effect waves-light btn red left">Delete Project</a>
-			    </c:if>
-	
+			    
+			    <sec:authorize access="!hasRole('Admin')">
+			    	<c:if test="${project.createUser == user.username}">
+			       		<a  href="<c:url value="/deleteProject?id=${project.id}" />"
+									class="waves-effect waves-light btn red left">Delete Project</a>
+			    	</c:if>
+			    </sec:authorize>
         </div>
         <!-- CONTEUDO -->
 	</div>

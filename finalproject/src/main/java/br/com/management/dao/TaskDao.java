@@ -21,9 +21,28 @@ public interface TaskDao extends JpaRepository<Task, Long>{
 	
 	public List<Task> findAllByOrderByIdAsc();
 	
+	public List<Task> findAllByUser(User user);
+	
+	//Filter Project Tasks
+	//Latest
+	public List<Task> findAllByProjectIdOrderByIdDesc(int id);
+	
+	//Oldest
 	public List<Task> findAllByProjectIdOrderByIdAsc(int id);
 	
-	public List<Task> findAllByUser(User user);
+	//Done
+	public List<Task> findAllByProjectIdAndStateOrderByIdAsc(int id, Integer state);
+	
+	//Filter My Task
+	//Latest
+	public List<Task> findAllByUserOrderByIdDesc(User user);
+	
+	//Oldest
+	public List<Task> findAllByUserOrderByIdAsc(User user);
+	
+	//Done
+	public List<Task> findAllByUserAndStateOrderByIdDesc(User user, Integer state);
+	
 	
 	@Transactional
 	public void deleteById(int id);

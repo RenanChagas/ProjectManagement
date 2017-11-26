@@ -17,5 +17,8 @@ public interface ProjectService {
 	public Project findByProjectName(String projectName);
 	
 	public List<Project> findAllByOrderByIdAsc();
+	
+	//Filter
+	public List<Project> findByFilter(String sortingType);
 
 }

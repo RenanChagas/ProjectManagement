@@ -1,0 +1,32 @@
+package br.com.management.dao;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import javax.transaction.Transactional;
+
+import java.util.List;
+
+import br.com.management.model.Project;
+import br.com.management.model.Task;
+import br.com.management.model.User;
+
+@Repository("ProjectDao")
+public interface ProjectDao extends JpaRepository<Project, Long>{
+	
+	public Project findById(int id);
+	
+	public Project findByProjectName(String projectName);
+	
+	public List<Project> findAllByOrderByIdAsc();
+	
+	//Filter
+	//Latest
+	public List<Project> findAllByOrderByIdDesc();
+	
+	//Oldest
+	public List<Project> findAllByOrderByIdDesc();
+	
+	@Transactional
+	public void deleteById(int id);
+
+}

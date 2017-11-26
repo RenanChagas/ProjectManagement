@@ -91,7 +91,6 @@
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
 	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
@@ -124,7 +123,7 @@
                     </a>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/task/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                      
                       </a>
@@ -134,7 +133,7 @@
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
                     <a href="${contextPath}/dashboard">Dashboard</a>
                     <a href="${contextPath}/projects">Projects</a>
-                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/task/myTasks">My Tasks</a>
                     <a href="${contextPath}/notification">Notifications</a>
                     <a href="${contextPath}/profile">Profile</a>
                     <a href="${contextPath}/logout">Logout</a>
@@ -155,16 +154,33 @@
 <div class="row  MDC-page-center MDC-page-container">
   <div class="col MDC-padding-0 left">
     <div class="MDC-page-title-size">
-      <i class="material-icons MDC-icon-small MDC-color-blue
-                  MDC-news-navigateBefore-icon-position MDC-relative">navigate_before</i>
-        <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Go Back</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Projects</font>
+      <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
+                   MDC-news-counterBar-position hide-on-small-and-down">/
+      </font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">${project.projectName}</font>
+      <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
+                   MDC-news-counterBar-position hide-on-small-and-down">/
+      </font>
+      <font class="MDC-h5-style MDC-color-blue MDC-display-inline">${task.name}</font>
     </div>
   </div>
 </div>
 <!-- TITLE PAGE-END-->
 
+
+
 <!-- CONTAINER-->
 <form:form id="taskUpdate-form" method="POST" modelAttribute="task" class="form-horizontal">
+
+<c:set var="disableField" value="true" />
+<c:if test="${task.createUser == user.username}">
+	<c:set var="disableField" value="false" />
+</c:if>
+
+
+
+
 <div class="MDC-page-center MDC-page-container MDC-margin-top40">
 	<div class="row MDC-float-none">
      	<!-- CONTEUDO -->
@@ -184,12 +200,23 @@
             	<!-- CARD TAB -->
               	<div class="col s12 MDC-card">
                 	<div class="MDC-card-news-container">
+                	
+                		<div class="row MDC-margin-bottom2">
+                    	<div class="MDC-card-news-user-row">
+                      	<div class="right MDC-font-12 MDC-color-grey MDC-margin-top10">Created by ${task.createUser}</div>
+                        <div class="left MDC-font-12 MDC-color-grey MDC-margin-top10">
+                        	<fmt:formatDate value="${task.createDate}" pattern="dd/MM/yyyy" />
+                        </div>
+                      </div>
+                    </div>
+                	
+                	
                 		<!-- Title -->
                         <div class="row MDC-margin-top40">
                            	<div class="input-field col s12">
                             	<form:input id="input_text" placeholder="Type of document you expect..." type="text"
                                 	path="name" data-length="20" class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
-                                   										MDC-font-weight-300"/>
+                                   										MDC-font-weight-300 " disabled="${disableField}" />
                                 <label for="input_text">Title</label>
                            </div>
                         </div>
@@ -199,7 +226,7 @@
                         	<div class="input-field col s12">
                              	<form:textarea id="textareaOverview" placeholder="Tell the content here..."
                                 	path="description"	class="materialize-textarea MDC-border-grey-light MDC-font-17 MDC-color-black
-                                						MDC-font-weight-300"/>
+                                						MDC-font-weight-300" disabled="${disableField}"/>
                          		<label for="textareaOverview">Content</label>
                             </div>
                         </div>
@@ -218,12 +245,15 @@
                     	</div>
                     	<!-- File Upload-END-->
                     	<!-- Due date -->
+                    	<fmt:formatDate value="${task.dueDate}" pattern="dd/MM/yyyy" var="theFormattedDate"/>
                         <div class="row MDC-margin-bottom30">
-	                        <div class="col MDC-maxSize-300">
+	                        <div id="dueDateDiv" class="col MDC-maxSize-300">
 	                        	<label for="datepicker1">Due Date</label>
 	                        		<form:input id="datepicker1" type="date" path="dueDate" 
-                                		placeholder="Choose a date" class="datepicker MDC-border-grey-light 
-                                		MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" />
+	                        			value=""
+                                		placeholder="${theFormattedDate}"	
+                                		class="datepicker MDC-border-grey-light 
+                                		MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" disabled="${disableField}"/>
 	                        </div>
                         </div>
                         <!-- Due date-END-->
@@ -232,7 +262,7 @@
                       <div class="row MDC-margin-bottom30">
                       	<div class="col MDC-maxSize-300">
                       		<form:input id="input_hours" placeholder="0.0 Hours" type="number" path="hours" step="0.1"
-														class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300"/>
+														class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" disabled="${disableField}"/>
                                 <label for="input_hours">Hours</label>
                       	</div>
                       </div>
@@ -262,7 +292,7 @@
 									</c:choose>
                         		</div>
                             	<div class="left MDC-font-12 MDC-color-grey MDC-margin-top10">
-                            		<fmt:formatDate value="${task.finishDate}" pattern="dd/MM/yyyy" />
+                            		
                             	</div>
                             </div>
                        	</div>

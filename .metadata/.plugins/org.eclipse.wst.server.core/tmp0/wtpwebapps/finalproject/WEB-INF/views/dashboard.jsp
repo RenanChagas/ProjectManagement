@@ -146,7 +146,7 @@
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
                     <a href="${contextPath}/dashboard">Dashboard</a>
                     <a href="${contextPath}/projects">Projects</a>
-                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/task/myTasks">My Tasks</a>
                     <a href="${contextPath}/notification">Notifications</a>
                     <a href="${contextPath}/profile">Profile</a>
                     <a href="${contextPath}/logout">Logout</a>
@@ -172,8 +172,6 @@
                      MDC-news-counterBar-position hide-on-small-and-down">/
         </font>
         <font class="MDC-h5-style MDC-color-blue MDC-display-inline">${user.username}</font>
-        <i class="material-icons MDC-icon-small MDC-color-blue
-                  MDC-news-expand-icon-position MDC-relative">expand_more</i>
 
       </div>
     </div>

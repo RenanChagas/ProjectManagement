@@ -96,4 +96,22 @@ public class ProjectServiceImpl implements ProjectService{
 		dao.deleteById(id);
 	}
 
+	@Override
+	public List<Project> findByFilter(String sortingType) {
+		switch(sortingType){
+			case "Latest":
+				return dao.findAllByOrderByIdDesc();
+			case "Oldest":
+				return dao.findAllByOrderByIdAsc();
+			case "Pending":
+				return dao.findAllByfinishStateOrderByIdDesc(1);	
+			case "Done":
+				return dao.findAllByfinishStateOrderByIdDesc(2);	
+			case "Cancelled":
+				return dao.findAllByfinishStateOrderByIdDesc(3);	
+			default:
+				return dao.findAllByOrderByIdDesc();
+		}
+	}
+
 }

@@ -15,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -54,17 +55,42 @@ public class TaskController {
 	public String list(@RequestParam("id") int projectId, Model model){
 		Project project = projectService.findById(projectId);
 		
-		
-		model.addAttribute("task", taskService.findAllByProjectIdOrderByIdAsc(projectId));
+		model.addAttribute("currentSorting", "Latest");
+		model.addAttribute("task", taskService.findProjectTasksByFilter("Latest", projectId));
 		model.addAttribute("project", project);
 		return "tasks";
 	}
 	
+	//FILTER
+	@RequestMapping(value= "/projects/tasks/filter/{sortingType}", method = RequestMethod.GET)
+	public String sortTask(@RequestParam("id") int projectId, Model model, 
+			@PathVariable String sortingType){
+		
+		Project project = projectService.findById(projectId);
+			
+		model.addAttribute("currentSorting", sortingType);
+		model.addAttribute("task", taskService.findProjectTasksByFilter(sortingType, projectId));
+		model.addAttribute("project", project);
+		return "tasks";
+	}
+	
+	
 	@RequestMapping(value = "/task/myTasks", method = RequestMethod.GET)
 	public String myTask(Model model){
-		model.addAttribute("task", taskService.findAllByUser(getUserName()));
+		model.addAttribute("currentSorting", "Latest");
+		model.addAttribute("task", taskService.findMyTaskByFilter("Latest", getUserName()));
 		return "myTasks";
 	}
+	
+	//FILTER MY TASKS
+	@RequestMapping(value= "/task/filter/{sortingType}", method = RequestMethod.GET)
+	public String sortMyTasks(ModelMap model, @PathVariable String sortingType){
+		
+		model.addAttribute("currentSorting", sortingType);
+		model.addAttribute("task", taskService.findMyTaskByFilter(sortingType, getUserName()));
+		return "myTasks";
+	}
+	
 	
 	@RequestMapping(value = "/task/create", method = RequestMethod.GET)
 	public String newTask(@RequestParam("id") int projectId, @RequestParam("taskType") int taskType, ModelMap model) {
@@ -124,9 +150,13 @@ public class TaskController {
 	@RequestMapping(value = "/task/details", method = RequestMethod.POST)
 	public String updateProject(Task task, BindingResult result, ModelMap model, RedirectAttributes atributes) {
 	
-		Date date = new Date();
-		task.setFinishDate(date);
-		task.setFinishUser(getPrincipal());
+		
+		if (task.getState() != 1){
+			Date date = new Date();
+			task.setFinishDate(date);
+			task.setFinishUser(getPrincipal());
+		}
+		
 		Task search = taskService.findById(task.getId());
 		taskService.update(task);
 		

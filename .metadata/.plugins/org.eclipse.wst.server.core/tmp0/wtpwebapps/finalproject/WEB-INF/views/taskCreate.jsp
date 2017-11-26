@@ -124,7 +124,7 @@
                     </a>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/task/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                      
                       </a>
@@ -134,7 +134,7 @@
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
                     <a href="${contextPath}/dashboard">Dashboard</a>
                     <a href="${contextPath}/projects">Projects</a>
-                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/task/myTasks">My Tasks</a>
                     <a href="${contextPath}/notification">Notifications</a>
                     <a href="${contextPath}/profile">Profile</a>
                     <a href="${contextPath}/logout">Logout</a>
@@ -155,9 +155,15 @@
 <div class="row  MDC-page-center MDC-page-container">
   <div class="col MDC-padding-0 left">
     <div class="MDC-page-title-size">
-      <i class="material-icons MDC-icon-small MDC-color-blue
-                  MDC-news-navigateBefore-icon-position MDC-relative">navigate_before</i>
-        <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Go Back</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Projects</font>
+      <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
+                   MDC-news-counterBar-position hide-on-small-and-down">/
+      </font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">${project.projectName}</font>
+      <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
+                   MDC-news-counterBar-position hide-on-small-and-down">/
+      </font>
+      <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Create Task</font>
     </div>
   </div>
 </div>

@@ -79,7 +79,6 @@
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
 	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
@@ -112,7 +111,7 @@
                     </a>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="#!">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/task/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                       
                       </a>
@@ -122,7 +121,7 @@
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
                     <a href="${contextPath}/dashboard">Dashboard</a>
                     <a href="${contextPath}/projects">Projects</a>
-                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/task/myTasks">My Tasks</a>
                     <a href="${contextPath}/notification">Notifications</a>
                     <a href="${contextPath}/profile">Profile</a>
                     <a href="${contextPath}/logout">Logout</a>
@@ -144,13 +143,30 @@
 	<!-- TITLE -->	
   <div class="col MDC-padding-0 left">
     <div class="MDC-page-title-size">
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Tasks</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">My Tasks</font>
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
                    MDC-news-counterBar-position hide-on-small-and-down">/
       </font>
-      <font class="MDC-h5-style MDC-color-blue MDC-display-inline">Latest</font>
+      <!-- Dropdown Sorting -->
+		  <a class='dropdown-button btn MDC-btn-dropdown-sort MDC-h5-style MDC-color-blue' 
+		  	href='#' data-activates='sortDropdown'>${currentSorting}
+		  	
+		  </a>
       <i class="material-icons MDC-icon-small MDC-color-blue
                 MDC-news-expand-icon-position MDC-relative">expand_more</i>
+                
+      <!-- Dropdown Structure -->
+		  <c:url var="taskUrl" value="/projects/tasks" />
+		  <ul id='sortDropdown' class='dropdown-content MDC-Dropdown-size'>
+		  
+		  	<li><a href="${taskUrl}/filter/Latest">Latest</a></li>
+		    <li><a href="${taskUrl}/filter/Oldest">Oldest</a></li>
+		    <li><a href="${taskUrl}/filter/Pending">Pending</a></li>
+		    <li><a href="${taskUrl}/filter/Done">Done</a></li>
+		    <li><a href="${taskUrl}/filter/Cancelled">Cancelled</a></li>
+		    <li><a href="${taskUrl}/filter/Failed">Failed</a></li>
+		  </ul>
+		  
     </div>
   </div>  
 

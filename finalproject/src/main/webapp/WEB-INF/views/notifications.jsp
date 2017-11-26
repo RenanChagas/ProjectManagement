@@ -91,7 +91,6 @@
 	            	<!-- Dropdown Structure -->
 	            	<ul id='account-dropdown' class='dropdown-content MDC-nav-account-dropdown-position'>
 	              		<li><a id="profile" class="modal-trigger MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/profile">Profile</a></li>
-	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="#!">Report a Problem</a></li>
 	              		<li class="divider"></li>
 	              		<li><a class="MDC-color-grey-dark-2 MDC-font-15" href="${contextPath}/logout">Logout</a></li>
 	            	</ul>
@@ -124,7 +123,7 @@
                     </a>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="#!">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/task/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/notification">Notifications</a>
                     </li>
                   </ul>
@@ -132,7 +131,7 @@
                     <a href="javascript:void(0)" class="MDC-closebtn" onclick="closeNav()">x</a>
                     <a href="${contextPath}/dashboard">Dashboard</a>
                     <a href="${contextPath}/projects">Projects</a>
-                    <a href="${contextPath}/myTasks">My Tasks</a>
+                    <a href="${contextPath}/task/myTasks">My Tasks</a>
                     <a href="${contextPath}/notification">Notifications</a>
                     <a href="${contextPath}/profile">Profile</a>
                     <a href="${contextPath}/logout">Logout</a>
@@ -170,7 +169,7 @@
 		  <ul id='sortDropdown' class='dropdown-content MDC-Dropdown-size'>
 		  
 		  	<li><a href="${notificationUrl}/filter/Latest">Latest</a></li>
-		    <li><a href="${notificationUrl}/filter/Newest">Newest</a></li>
+		    <li><a href="${notificationUrl}/filter/Newest">Oldest</a></li>
 		    <li><a href="${notificationUrl}/filter/Read">Read</a></li>
 		    <li><a href="${notificationUrl}/filter/Unread">Unread</a></li>
 		  </ul>

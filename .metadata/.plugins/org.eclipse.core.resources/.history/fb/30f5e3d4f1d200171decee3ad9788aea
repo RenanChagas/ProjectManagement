@@ -1,0 +1,159 @@
+package br.com.management.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import br.com.management.dao.NotificationDao;
+import br.com.management.dao.TaskDao;
+import br.com.management.model.Notification;
+import br.com.management.model.Project;
+import br.com.management.model.Task;
+import br.com.management.model.User;
+import br.com.management.service.NotificationService;
+import br.com.management.service.NotificationTypeService;
+import br.com.management.service.TaskService;
+
+@Service("TaskService")
+@Transactional
+public class TaskServiceImpl implements TaskService{
+	
+	@Autowired
+	private TaskDao dao;
+	
+	@Autowired
+	private NotificationService notificationService;
+	
+	@Autowired
+	private NotificationTypeService notificationTypeService;
+	
+	@Autowired
+	private NotificationDao notificationDao;
+
+	@Override
+	public void save(Task task) {
+		
+		switch(task.getTaskType().getId()){
+		
+		case 1:
+			task.setIcon("test");
+			break;
+		case 2:
+			task.setIcon("error");
+			break;
+		}
+		
+		task.setState(1);
+
+		Task createTask = dao.saveAndFlush(task);
+
+		//Criar Objeto para criação de notificação da tarefa
+		Notification notification = new Notification();
+		notification.setFlRead(false);
+		notification.setNotificationType(notificationTypeService.findByType("CREATED"));
+		notification.setTask(createTask);		
+		notification.setUser(createTask.getUser());
+		notification.setCreateDate(createTask.getCreateDate());
+		
+		notificationService.save(notification);
+	}
+
+	@Override
+	public void update(Task task) {
+		
+		//Task updateTask = findById(task.getId());
+		
+		//Fixing null values that werent changed
+		Task updateTask = findById(task.getId());
+		
+		updateTask.setName(task.getName());
+		updateTask.setDescription(task.getDescription());
+		updateTask.setState(task.getState());
+		updateTask.setHoursUsed(task.getHoursUsed());
+		updateTask.setHours(task.getHours());
+		
+		if (task.getDueDate() != null){
+			updateTask.setDueDate(task.getDueDate());
+		}
+		
+		if (task.getFinishDesc() != null){
+			updateTask.setFinishDesc(task.getFinishDesc());
+		}
+		
+		if (task.getFinishDate() != null){
+			updateTask.setFinishDate(task.getFinishDate());
+		}
+		
+		if (task.getFinishUser() != null){
+			updateTask.setFinishUser(task.getFinishUser());
+		}
+		
+		if (task.getCreateUser() != null){
+			updateTask.setCreateUser(task.getCreateUser());
+		}
+		if (task.getCreateDate() == null){
+			updateTask.setCreateDate(task.getCreateDate());
+		}
+		
+		dao.save(updateTask);
+	}
+
+	@Override
+	public void deleteById(int id) {
+		notificationDao.deleteInBatch(notificationService.findAllByTaskOrderByIdAsc(dao.findAllById(id)));
+		dao.deleteInBatch(dao.findAllById(id));
+		
+	}
+
+	@Override
+	public Task findById(int id) {
+		return dao.findById(id);
+	}
+
+	@Override
+	public Task findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Task> findAllByOrderByIdAsc() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Task> findAllByProjectIdOrderByIdAsc(int id) {
+		return dao.findAllByProjectIdOrderByIdAsc(id);
+	}
+
+	@Override
+	public List<Task> findAllByUser(User user) {
+		return dao.findAllByUser(user);
+	}
+
+	@Override
+	public List<Task> findMyTaskByFilter(String sortingType, User user) {
+		switch(sortingType){
+		
+		case "Latest":
+			return dao.findAllByUserOrderByIdDesc(user);
+		case "Oldest":
+			return dao.findAllByUserOrderByIdAsc(user);
+		case "Pending":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 1);	
+		case "Done":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 2);
+		case "Cancelled":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 3);
+		case "Failed":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 4);
+		default:
+			//return dao.findAllByUserOrderByIdDesc(user);
+		return null;
+		}
+	}
+
+}

@@ -62,17 +62,39 @@ public class TaskServiceImpl implements TaskService{
 	@Override
 	public void update(Task task) {
 		
+		//Task updateTask = findById(task.getId());
+		
+		//Fixing null values that werent changed
 		Task updateTask = findById(task.getId());
 		
 		updateTask.setName(task.getName());
 		updateTask.setDescription(task.getDescription());
-		updateTask.setDueDate(task.getDueDate());
 		updateTask.setState(task.getState());
-		updateTask.setFinishDesc(task.getFinishDesc());
-		updateTask.setFinishDate(task.getFinishDate());
-		updateTask.setFinishUser(task.getFinishUser());
 		updateTask.setHoursUsed(task.getHoursUsed());
 		updateTask.setHours(task.getHours());
+		
+		if (task.getDueDate() != null){
+			updateTask.setDueDate(task.getDueDate());
+		}
+		
+		if (task.getFinishDesc() != null){
+			updateTask.setFinishDesc(task.getFinishDesc());
+		}
+		
+		if (task.getFinishDate() != null){
+			updateTask.setFinishDate(task.getFinishDate());
+		}
+		
+		if (task.getFinishUser() != null){
+			updateTask.setFinishUser(task.getFinishUser());
+		}
+		
+		if (task.getCreateUser() != null){
+			updateTask.setCreateUser(task.getCreateUser());
+		}
+		if (task.getCreateDate() == null){
+			updateTask.setCreateDate(task.getCreateDate());
+		}
 		
 		dao.save(updateTask);
 	}
@@ -109,6 +131,47 @@ public class TaskServiceImpl implements TaskService{
 	@Override
 	public List<Task> findAllByUser(User user) {
 		return dao.findAllByUser(user);
+	}
+
+	@Override
+	public List<Task> findMyTaskByFilter(String sortingType, User user) {
+		switch(sortingType){
+		
+		case "Latest":
+			return dao.findAllByUserOrderByIdDesc(user);
+		case "Oldest":
+			return dao.findAllByUserOrderByIdAsc(user);
+		case "Pending":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 1);	
+		case "Done":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 2);
+		case "Cancelled":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 3);
+		case "Failed":
+			return dao.findAllByUserAndStateOrderByIdDesc(user, 4);
+		default:
+			return dao.findAllByUserOrderByIdDesc(user);
+		}
+	}
+
+	@Override
+	public List<Task> findProjectTasksByFilter(String sortingType, int id) {
+		switch(sortingType){
+			case "Latest":
+				return dao.findAllByProjectIdOrderByIdDesc(id);
+			case "Oldest":
+				return dao.findAllByProjectIdOrderByIdAsc(id);
+			case "Pending":
+				return dao.findAllByProjectIdAndStateOrderByIdAsc(id, 1);	
+			case "Done":
+				return dao.findAllByProjectIdAndStateOrderByIdAsc(id, 2);
+			case "Cancelled":
+				return dao.findAllByProjectIdAndStateOrderByIdAsc(id, 3);
+			case "Failed":
+				return dao.findAllByProjectIdAndStateOrderByIdAsc(id, 4);
+			default:
+				return dao.findAllByProjectIdOrderByIdDesc(id);
+		}
 	}
 
 }
