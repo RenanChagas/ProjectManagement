@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="userId" key="selection"/>
+		<item value="HOURS" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="userId"/>
-			<item value="selectedValue"/>
-			<item value="task.user"/>
-			<item value="&lt;c:set var=&quot;disableField&quot; value=&quot;false&quot; /&gt;"/>
-			<item value="taskUser"/>
-			<item value="&lt;c:set"/>
-			<item value="testando objeto assigned"/>
-			<item value="percCompletedTasks"/>
+			<item value="hours"/>
+			<item value="save"/>
+			<item value="create"/>
+			<item value="user"/>
+			<item value="task que será atualizada"/>
+			<item value="TESTANDO TASK"/>
+			<item value="TESTANDO CREATE DATE"/>
+			<item value="createDate"/>
 		</list>
 		<list key="replacehistory">
 		</list>

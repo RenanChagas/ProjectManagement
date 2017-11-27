@@ -26,7 +26,6 @@
 <fullyQualifiedTypeName name="br.com.management.dao.ProjectDao"/>
 <fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-<fullyQualifiedTypeName name="br.com.management.service.ProjectService"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
 <fullyQualifiedTypeName name="br.com.management.model.Project"/>
@@ -52,4 +51,5 @@
 <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.springframework.format.datetime.DateFormatter"/>
+<fullyQualifiedTypeName name="br.com.management.service.ProjectService"/>
 </qualifiedTypeNameHistroy>

@@ -40,6 +40,7 @@ public class ProjectController {
 	
 	@RequestMapping("/projects")
 	public String list(Model model){
+		
 		model.addAttribute("currentSorting", "Latest");
 		model.addAttribute("project", projectService.findByFilter("Latest"));
 		return "projects";
@@ -48,7 +49,7 @@ public class ProjectController {
 	//FILTER
 	@RequestMapping(value= "/projects/filter/{sortingType}", method = RequestMethod.GET)
 	public String sortNotification(ModelMap model, @PathVariable String sortingType){
-			
+		
 		model.addAttribute("currentSorting", sortingType);
 		model.addAttribute("project", projectService.findByFilter(sortingType));
 		return "projects";

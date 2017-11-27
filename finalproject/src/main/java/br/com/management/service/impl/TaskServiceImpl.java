@@ -7,12 +7,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import br.com.management.dao.NotificationDao;
+import br.com.management.dao.ProjectDao;
 import br.com.management.dao.TaskDao;
 import br.com.management.model.Notification;
+import br.com.management.model.Project;
 import br.com.management.model.Task;
 import br.com.management.model.User;
 import br.com.management.service.NotificationService;
 import br.com.management.service.NotificationTypeService;
+import br.com.management.service.ProjectService;
 import br.com.management.service.TaskService;
 
 @Service("TaskService")
@@ -30,6 +33,13 @@ public class TaskServiceImpl implements TaskService{
 	
 	@Autowired
 	private NotificationDao notificationDao;
+	
+	@Autowired
+	private ProjectService projectService;
+	
+	@Autowired
+	private ProjectDao	projectDao;
+	
 
 	@Override
 	public void save(Task task) {
@@ -45,8 +55,18 @@ public class TaskServiceImpl implements TaskService{
 		}
 		
 		task.setState(1);
+		
+		
 
 		Task createTask = dao.saveAndFlush(task);
+		
+		
+		//Adicionar a quantidade de horas ao projeto
+		Project project = projectService.findById(task.getProject().getId());
+		project.setHours(task.getHours() + project.getHours());
+		
+		projectService.save(project);
+		
 		
 		//Criar Objeto para criação de notificação da tarefa
 		Notification notification = new Notification();
@@ -66,11 +86,11 @@ public class TaskServiceImpl implements TaskService{
 		//Fixing null values that werent changed
 		Task updateTask = findById(task.getId());
 		
-		System.out.println("TESTANDO TASK " + findById(task.getId()));
+		System.out.println("horas anteriores" +updateTask.getHours());
 		
-		System.out.println("testando CreateDate2" + task.getCreateDate());
-		
-		System.out.println("Testando CreateDate3" + updateTask.getCreateDate());
+		//Adicionar a quantidade de horas ao projeto
+		Project project = projectService.findById(updateTask.getProject().getId());
+		project.setHours(project.getHours() - updateTask.getHours());
 		
 		updateTask.setName(task.getName());
 		updateTask.setDescription(task.getDescription());
@@ -98,6 +118,12 @@ public class TaskServiceImpl implements TaskService{
 		if (task.getCreateUser() != null){
 			updateTask.setCreateUser(task.getCreateUser());
 		}
+		
+		System.out.println("horas posteriores" +updateTask.getHours());
+		
+		project.setHours(task.getHours() + project.getHours());
+				
+		projectService.save(project);
 		
 		System.out.println("task que será atualizada" +updateTask);
 		dao.save(updateTask);

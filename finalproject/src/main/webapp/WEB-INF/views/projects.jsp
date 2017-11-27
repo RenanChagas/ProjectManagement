@@ -222,7 +222,7 @@
           			<div class="row center MDC-margin-bottom-10">
             			<font class="truncate MDC-font-16-2 MDC-color-grey MDC-font-h1
                         	MDC-uppercase-none">
-               				0 Hours
+               				Hours ${projects.hours} / 00.00
             			</font>
           			</div>
           			

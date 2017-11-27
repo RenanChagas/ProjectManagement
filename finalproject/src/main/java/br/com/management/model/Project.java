@@ -61,9 +61,12 @@ public class Project {
 	@Column(name="STATE_ICON")
 	private String stateIcon;
 	
+	@Column(name="HOURS")
+	private float hours;
+	
 	@OneToMany(fetch=FetchType.EAGER, cascade= {CascadeType.PERSIST, CascadeType.REMOVE} ,mappedBy="project", targetEntity = Task.class)
     public List<Task> task;
-
+	
 	public int getId() {
 		return id;
 	}
@@ -161,4 +164,12 @@ public class Project {
 		this.stateIcon = stateIcon;
 	}
 
+	public float getHours() {
+		return hours;
+	}
+
+	public void setHours(float hours) {
+		this.hours = hours;
+	}
+	
 }
