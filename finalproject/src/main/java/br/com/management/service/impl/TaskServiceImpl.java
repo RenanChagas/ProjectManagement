@@ -47,7 +47,7 @@ public class TaskServiceImpl implements TaskService{
 		task.setState(1);
 
 		Task createTask = dao.saveAndFlush(task);
-
+		
 		//Criar Objeto para criação de notificação da tarefa
 		Notification notification = new Notification();
 		notification.setFlRead(false);
@@ -56,22 +56,28 @@ public class TaskServiceImpl implements TaskService{
 		notification.setUser(createTask.getUser());
 		notification.setCreateDate(createTask.getCreateDate());
 		
+		
 		notificationService.save(notification);
 	}
 
 	@Override
 	public void update(Task task) {
 		
-		//Task updateTask = findById(task.getId());
-		
 		//Fixing null values that werent changed
 		Task updateTask = findById(task.getId());
+		
+		System.out.println("TESTANDO TASK " + findById(task.getId()));
+		
+		System.out.println("testando CreateDate2" + task.getCreateDate());
+		
+		System.out.println("Testando CreateDate3" + updateTask.getCreateDate());
 		
 		updateTask.setName(task.getName());
 		updateTask.setDescription(task.getDescription());
 		updateTask.setState(task.getState());
 		updateTask.setHoursUsed(task.getHoursUsed());
 		updateTask.setHours(task.getHours());
+		updateTask.setUser(task.getUser());
 		
 		if (task.getDueDate() != null){
 			updateTask.setDueDate(task.getDueDate());
@@ -92,10 +98,8 @@ public class TaskServiceImpl implements TaskService{
 		if (task.getCreateUser() != null){
 			updateTask.setCreateUser(task.getCreateUser());
 		}
-		if (task.getCreateDate() == null){
-			updateTask.setCreateDate(task.getCreateDate());
-		}
 		
+		System.out.println("task que será atualizada" +updateTask);
 		dao.save(updateTask);
 	}
 

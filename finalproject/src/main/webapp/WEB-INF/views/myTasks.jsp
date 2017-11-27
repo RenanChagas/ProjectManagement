@@ -71,9 +71,9 @@
 	               		</div>
 	               		<span class="MDC-login-text MDC-nav-account-text-position 
 	               					MDC-color-grey-light hide-on-med-and-down">
-	                 	${user.username}
+	                 	${userLogin.username}
 	               		</span>
-	               		<img src="<c:url value="/static/images/avatar/${user.username}/${user.username}.png"/>"
+	               		<img src="<c:url value="/static/images/avatar/${userLogin.username}/${userLogin.username}.png"/>"
 	               				class="MDC-avatar-circle-small mdc-nav-avatar-position"/>
 	            	</a>
 	            	<!-- Dropdown Structure -->

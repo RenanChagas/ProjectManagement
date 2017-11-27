@@ -27,6 +27,8 @@
   
   <script type="text/javascript">
     $(document).ready(function() {
+    	
+    	
 
       $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
@@ -39,8 +41,15 @@
       });
 
       $('#textareaOverview').trigger('autoresize');
-
+      
+      $('#taskUser').material_select();
+	     
     });
+    
+    function myFunc(item) {
+    	var  selectedValue= $("#taskUser").val();
+	    $('#userId').attr('value', item.value);
+		}
   </script>
 
 </head>
@@ -83,9 +92,9 @@
 	               		</div>
 	               		<span class="MDC-login-text MDC-nav-account-text-position 
 	               					MDC-color-grey-light hide-on-med-and-down">
-	                 	${user.username}
+	                 	${userLogin.username}
 	               		</span>
-	               		<img src="<c:url value="/static/images/avatar/${user.username}/${user.username}.png"/>"
+	               		<img src="<c:url value="/static/images/avatar/${userLogin.username}/${userLogin.username}.png"/>"
 	               				class="MDC-avatar-circle-small mdc-nav-avatar-position"/>
 	            	</a>
 	            	<!-- Dropdown Structure -->
@@ -174,7 +183,7 @@
 <form:form id="taskUpdate-form" method="POST" modelAttribute="task" class="form-horizontal">
 
 <c:set var="disableField" value="true" />
-<c:if test="${task.createUser == user.username}">
+<c:if test="${task.createUser == userLogin.username}">
 	<c:set var="disableField" value="false" />
 </c:if>
 
@@ -266,6 +275,16 @@
                                 <label for="input_hours">Hours</label>
                       	</div>
                       </div>
+                      <!-- ASSIGN USER -->
+                      <div class="row MDC-margin-bottom30">
+                      	<div class="col MDC-maxSize-300">
+                      		<label for="taskUser">Assign to</label>
+                      		<form:select id="taskUser" itemValue="id" itemLabel="username"  path="user" items="${allUsers}" multiple="false"
+                      		onchange="myFunc(this);"></form:select>
+                      	</div>
+                      </div>
+                      
+                      <input type="hidden" id="userId" name="userId" value="${userId}"/>
                       
                 	</div>
                 </div>
@@ -365,7 +384,7 @@
 			    		<a  href="<c:url value="/deleteTask?id=${task.id}" />"
 								class="waves-effect waves-light btn red left">Delete</a>
 			    	</sec:authorize>
-			    	<c:if test="${task.createUser}==${user.username}">
+			    	<c:if test="${task.createUser}==${userLogin.username}">
 			       	<a  href="<c:url value="/deleteTask?id=${task.id}" />"
 								class="waves-effect waves-light btn red left">Delete</a>
 			    	</c:if>

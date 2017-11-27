@@ -41,7 +41,7 @@ public class TaskController {
 	@Autowired
 	TaskService taskService;
 	
-	@ModelAttribute("user")
+	@ModelAttribute("userLogin")
 	public User getUserName() {
 		return userService.findByUsername(getPrincipal());
 	}
@@ -97,23 +97,25 @@ public class TaskController {
 		Project project = projectService.findById(projectId);
 		Task task = new Task();
 		
+		int userId = 0;
+		
 		model.addAttribute("task", task);
 		model.addAttribute("project", project);
-		model.addAttribute("user2",new User());
+		model.addAttribute("userId", userId);
 		return "taskCreate";
 	}
 	
 	@RequestMapping(value = "/task/create", method = RequestMethod.POST)
 	public String newTask(@RequestParam("id") int projectId, @RequestParam("taskType") int taskType, ModelMap model, Task task,
-			BindingResult result, RedirectAttributes ra, @ModelAttribute("user") User selectedUser) {
+			BindingResult result, RedirectAttributes ra, @ModelAttribute("userId") int userId) {
 		
 		TaskType taskType2 = new TaskType();
 		taskType2.setId(taskType);
 		task.setTaskType(taskType2);
-	
+		
 		//SETANDO O USUARIO DA TASK
-		User user = userService.findByUsername(selectedUser.getUsername());
-		task.setUser(user);
+		User userTask = userService.findById(userId);
+		task.setUser(userTask);
 		
 		if (task.getCreateUser() == null){
 			Date date = new Date();
@@ -134,34 +136,41 @@ public class TaskController {
 	@RequestMapping(value = "/task/details", method = RequestMethod.GET)
 	public String updateProject(@RequestParam("id") int taskId, Model model, @RequestParam("projectId") int projectId){
 		
+		int userId = 0;
+		
 		Project project = projectService.findById(projectId);
 		Task task = taskService.findById(taskId);
-		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-		Date date = task.getDueDate();
-		dateFormat.format(date);
-		task.setDueDate(date);
+		
+		
+		System.out.println("Task USER TESTE 2 " + task.getUser());
 		
 		model.addAttribute("project", project);
-		model.addAttribute("task", taskService.findById(taskId));
-		System.out.println(taskService.findById(taskId));
+		model.addAttribute("task", task);
+		model.addAttribute("userId", userId);
 		return "taskDetail";
 	}
 	
 	@RequestMapping(value = "/task/details", method = RequestMethod.POST)
-	public String updateProject(Task task, BindingResult result, ModelMap model, RedirectAttributes atributes) {
-	
+	public String updateProject(Model model, Task task, BindingResult result, 
+			RedirectAttributes ra, @ModelAttribute("userId") int userId) {
+		
+		//SETANDO O USUARIO DA TASK
+		User userTask = userService.findById(userId);
+		task.setUser(userTask);
 		
 		if (task.getState() != 1){
 			Date date = new Date();
 			task.setFinishDate(date);
 			task.setFinishUser(getPrincipal());
 		}
+
+		System.out.println("TESTANDO CREATE DATE" +task);
 		
 		Task search = taskService.findById(task.getId());
 		taskService.update(task);
 		
 		
-		atributes.addAttribute("id", search.getProject().getId());
+		ra.addAttribute("id", search.getProject().getId());
 		return "redirect:/projects/tasks?";
 	}
 	

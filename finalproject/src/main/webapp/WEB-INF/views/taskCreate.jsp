@@ -42,6 +42,11 @@
       $('#taskUser').material_select();
       
     });
+    
+    function myFunc() {
+        var  selectedValue= $("#taskUser").val();
+        $('#userId').attr('value', selectedValue)
+       }
   </script>
 
 </head>
@@ -84,9 +89,9 @@
 	               		</div>
 	               		<span class="MDC-login-text MDC-nav-account-text-position 
 	               					MDC-color-grey-light hide-on-med-and-down">
-	                 	${user.username}
+	                 	${userLogin.username}
 	               		</span>
-	               		<img src="<c:url value="/static/images/avatar/${user.username}/${user.username}.png"/>"
+	               		<img src="<c:url value="/static/images/avatar/${userLogin.username}/${userLogin.username}.png"/>"
 	               				class="MDC-avatar-circle-small mdc-nav-avatar-position"/>
 	            	</a>
 	            	<!-- Dropdown Structure -->
@@ -242,14 +247,16 @@
                       
                       <div class="row MDC-margin-bottom30">
                       	<div class="col MDC-maxSize-300">
-	                      		<label for="taskUser">Assign to</label>
+	                      		<form:label for="taskUser" path="user">Assign to</form:label>
 	                      		<form:select id="taskUser" path="user" multiple="false"
-	                      			class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" >
+	                      			class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" onchange="myFunc()">
 	                      			<form:option value="" label="Choose a user" />
 	                      			<form:options itemValue="id" itemLabel="username" value="${task.user}" items="${allUsers}" /> 
 	                      		</form:select>
                       	</div>
                       </div>
+                      
+                      <input type="hidden" id="userId" name="userId" value="${userId}"/>
                         
                 	</div>
                 </div>
