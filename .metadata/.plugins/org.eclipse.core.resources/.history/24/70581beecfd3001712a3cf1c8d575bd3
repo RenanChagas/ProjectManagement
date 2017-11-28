@@ -124,7 +124,7 @@ public class TaskServiceImpl implements TaskService{
 		System.out.println("horas posteriores" +updateTask.getHours());
 		
 		project.setHours(task.getHours() + project.getHours());
-		project.setHoursUsed(task.getHoursUsed() + project.getHoursUsed());
+		project.setHours(task.getHoursUsed() + project.getHoursUsed());
 				
 		projectService.save(project);
 		

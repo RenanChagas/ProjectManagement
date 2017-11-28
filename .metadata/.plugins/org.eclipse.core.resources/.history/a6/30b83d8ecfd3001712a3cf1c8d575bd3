@@ -91,8 +91,6 @@ public class TaskServiceImpl implements TaskService{
 		//Adicionar a quantidade de horas ao projeto
 		Project project = projectService.findById(updateTask.getProject().getId());
 		project.setHours(project.getHours() - updateTask.getHours());
-		project.setHoursUsed(project.getHoursUsed() - updateTask.getHoursUsed());
-		
 		
 		updateTask.setName(task.getName());
 		updateTask.setDescription(task.getDescription());
@@ -124,7 +122,6 @@ public class TaskServiceImpl implements TaskService{
 		System.out.println("horas posteriores" +updateTask.getHours());
 		
 		project.setHours(task.getHours() + project.getHours());
-		project.setHoursUsed(task.getHoursUsed() + project.getHoursUsed());
 				
 		projectService.save(project);
 		
