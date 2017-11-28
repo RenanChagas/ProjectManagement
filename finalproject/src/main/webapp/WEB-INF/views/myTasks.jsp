@@ -216,14 +216,14 @@
 				  <!-- Title -->
 					<div class="row center MDC-margin-bottom-10">
 				  	<font class="truncate MDC-font-15 MDC-color-grey-dark-2 MDC-font-h1">
-				    	${tasks.taskType.type}
+				    	${tasks.name}
 				    </font>
 					</div>
 					
 					<!-- Description -->
        	<div class="row center MDC-margin-bottom-10">
         	<font class="truncate MDC-font-16-2 MDC-color-grey MDC-font-h1 MDC-uppercase-none">
-          	${tasks.name}
+          	Hours ${tasks.hours} / ${tasks.hoursUsed}
           </font>
       	</div>
       	

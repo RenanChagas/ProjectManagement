@@ -110,8 +110,8 @@
                       </i>
                     </a>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/dashboard">Dashboard</a></li>
-                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/projects">Projects</a></li>
-                    <li class="MDC-navbar-menu"><a href="${contextPath}/task/myTasks">My Tasks</a></li>
+                    <li class="MDC-navbar-menu"><a href="${contextPath}/projects">Projects</a></li>
+                    <li class="MDC-navbar-menu"><a class="active MDC-navbar-active" href="${contextPath}/task/myTasks">My Tasks</a></li>
                     <li class="MDC-navbar-menu"><a href="${contextPath}/notification">Notifications
                       
                       </a>
@@ -143,11 +143,7 @@
 	<!-- TITLE -->	
   <div class="col MDC-padding-0 left">
     <div class="MDC-page-title-size">
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">Projects</font>
-      <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
-                   MDC-news-counterBar-position hide-on-small-and-down">/
-      </font>
-      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">${project.projectName}</font>
+      <font class="MDC-h5-style MDC-color-grey-dark-2 MDC-display-inline hide-on-small-and-down">My Tasks</font>
       <font class="MDC-h5-style MDC-color-grey-light-2 MDC-display-inline MDC-relative
                    MDC-news-counterBar-position hide-on-small-and-down">/
       </font>
@@ -163,166 +159,23 @@
 		  <c:url var="taskUrl" value="/projects/tasks" />
 		  <ul id='sortDropdown' class='dropdown-content MDC-Dropdown-size'>
 		  
-		  	<li><a href="${taskUrl}/filter/Latest?id=${project.id}">Latest</a></li>
-		    <li><a href="${taskUrl}/filter/Oldest?id=${project.id}">Oldest</a></li>
-		    <li><a href="${taskUrl}/filter/Pending?id=${project.id}">Pending</a></li>
-		    <li><a href="${taskUrl}/filter/Done?id=${project.id}">Done</a></li>
-		    <li><a href="${taskUrl}/filter/Cancelled?id=${project.id}">Cancelled</a></li>
-		    <li><a href="${taskUrl}/filter/Failed?id=${project.id}">Failed</a></li>
-		    
-		    
-		    
+		  	<li><a href="${taskUrl}/filter/Latest">Latest</a></li>
+		    <li><a href="${taskUrl}/filter/Oldest">Oldest</a></li>
+		    <li><a href="${taskUrl}/filter/Pending">Pending</a></li>
+		    <li><a href="${taskUrl}/filter/Done">Done</a></li>
+		    <li><a href="${taskUrl}/filter/Cancelled">Cancelled</a></li>
+		    <li><a href="${taskUrl}/filter/Failed">Failed</a></li>
 		  </ul>
+		  
     </div>
-  </div>
-  <!-- ADD TASK -->
-  <div class="right MDC-margin-right50">
-    <a href="#modalTask" 
-      class="btn-floating btn-large waves-effect MDC-absolute right
-            MDC-background-blue MDC-General-floatbtn-position">
-      <i class="material-icons">add</i>
-    </a>
-  </div>
-  
-  
-	<!-- MODAL -->
-	<div id="modalTask" class="modal MDC-modal-fullScreen">
-  	<a href="#!" class="modal-action modal-close btn-floating btn-large
-                      waves-effect MDC-background-black-light right
-                      MDC-modal-close-btn-position">
-        <i class="material-icons">close</i>
-    </a>
-    
-    <!-- CONTAINER -->
-    <div class="MDC-center-container MDC-margin-left120">
-        <div class="row">
-            <!-- TEST -->
-            <div class="col s12 m6 l6 MDC-padding-0 MDC-modal-margin MDC-modal-max-size left">
-                <!-- Image -->
-                <a href="#">
-                    <div class="row center MDC-margin-top20">
-                        <img src="<c:url value="/static/images/default/tasks/test.png"/>"
-                        class="MDC-avatar-circle-medium MDC-shadow-default"/>
-                    </div>
-                </a>
-                <!-- Task Title -->
-                <div class="row center MDC-margin-bottom8">
-                    <font class="truncate MDC-font-15 MDC-color-grey-dark-2 MDC-font-h1">
-                        Test
-                    </font>
-                </div>
-                <!-- Task Description -->
-                <div class="row center MDC-margin-bottom40 MDC-modal-description-size">
-                    <font class="truncate MDC-font-16-2 MDC-color-grey MDC-font-h1
-                        MDC-uppercase-none MDC-font-description MDC-font-weight-400">
-                        Store and create the case tests activities
-                    </font>
-                </div>
-                <!-- Task button -->
-                <div class="row center MDC-margin-bottom-10">
-                    <a  href="<c:url value="/task/create?id=${project.id}&taskType=1" />"
-										class="btn waves-effect waves-light blue MDC-form-text">Create Task</a>
-                </div>
-            </div>
-            <!-- TEST-END-->
-            <!-- BUG -->
-            <div class="col col s12 m6 l6 MDC-padding-0 MDC-modal-margin MDC-modal-max-size right">
-                <!-- Image -->
-                <a href="#">
-                    <div class="row center MDC-margin-top20">
-                        <img src="<c:url value="/static/images/default/tasks/error.png"/>"
-                            class="MDC-avatar-circle-medium MDC-shadow-default"/>
-                    </div>
-                </a>
-                <!-- Task Title -->
-                <div class="row center MDC-margin-bottom8">
-                    <font class="truncate MDC-font-15 MDC-color-grey-dark-2 MDC-font-h1">
-                        BUG
-                    </font>
-                </div>
-                <!-- Task Description -->
-                <div class="row center MDC-margin-bottom40 MDC-modal-description-size">
-                    <font class="truncate MDC-font-16-2 MDC-color-grey MDC-font-h1
-                        MDC-uppercase-none MDC-font-description MDC-font-weight-400">
-                        Report issues found during test activities
-                    </font>
-                </div>
-                <!-- Task button -->
-                <div class="row center MDC-margin-bottom-10">
-                	<a  href="<c:url value="/task/create?id=${project.id}&taskType=2" />"
-										class="btn waves-effect waves-light blue MDC-form-text">Create Task</a>
-                </div>
-            </div>
-            <!-- BUG-END -->
-        </div>
-    </div>
-    <!-- CONTAINER-END-->
-	</div>
-<!-- MODAL-END-->
+  </div>  
+
 </div>
 <!-- TITLE ROW - END -->
 
 <div class="MDC-page-center MDC-page-container">
 	<div class="row MDC-page-margin-top">
-		<!-- CARD ICON -->
-		<c:choose>
-			<c:when test="${project.finishState=='1'}">
-				<c:set var="backgroundColor" value="MDC-background-blue" />
-			</c:when>
-			<c:when test="${project.finishState=='2'}">
-				<c:set var="backgroundColor" value="green" />
-			</c:when>     
-			<c:otherwise>
-				<c:set var="backgroundColor" value="materialize-red" /> 
-			</c:otherwise>
-		</c:choose>
-		
-		<!-- Project -->
-		<div class="col MDC-padding-0 MDC-margin-right40 MDC-margin-bottom30">
-			<!-- CARD -->
-			<div class="MDC-card MDC-course-card-size"  onclick="<t:url value="/projects/details?id=${project.id}" />">
-				<!-- float btn -->
-				<a href=" <t:url value="/projects/details?id=${project.id}" /> " 
-					class="btn-floating btn waves-effect  MDC-absolute  right MDC-category-floatbtn-position ${backgroundColor}">
-			  	<i class="material-icons">${project.stateIcon}</i>
-			  </a>
-			    	
-			  <!-- Image -->
-			  <a href=" <t:url value="/projects/details?id=${project.id}" /> ">
-			  <div class="row center MDC-margin-top20">
-			  	<img src="<c:url value="/static/images/default/tasks/documents.png"/>"
-			    	class="MDC-avatar-circle-large MDC-shadow-default"/>
-			  </div>
-			  </a>
-			 	
-			 	<!-- Title -->
-				<div class="row center MDC-margin-bottom-10">
-			  	<font class="truncate MDC-font-15 MDC-color-grey-dark-2 MDC-font-h1">
-			    	Documents
-			    </font>
-				</div>
-			        
-			  <!-- Description -->
-       	<div class="row center MDC-margin-bottom-10">
-        	<font class="truncate MDC-font-16-2 MDC-color-grey MDC-font-h1 MDC-uppercase-none">
-          	Overview
-          </font>
-      	</div>
-          			
-      	<!-- Project Date -->
-        <div class="row MDC-margin-top10 MDC-width-80perc">
-        <div class="MDC-divider"></div>
-        	<font class="truncate MDC-font-16-2 MDC-uppercase-none MDC-font-h1 MDC-color-grey-dark-2">
-          	Due Date:
-         	</font>
-        	<font class="MDC-color-grey">
-        		<fmt:formatDate pattern="dd/MM/yyyy" value="${project.dueDate}" />
-        	</font>
-    		</div>
-			</div>
-			<!-- CARD END -->
-		</div>
-		<!-- Project-END -->
+	
  		<!-- TASKS -->
 		<c:forEach items="${task}" var="tasks">
 			<div class="col MDC-padding-0 MDC-margin-right40 MDC-margin-bottom30">
@@ -346,14 +199,14 @@
 					</c:when>
 				</c:choose>
 				
-				<div class="MDC-card MDC-course-card-size"  onclick="<t:url value="/task/details?id=${tasks.id}&projectId=${project.id}" />">
-					<a href=" <t:url value="/task/details?id=${tasks.id}&projectId=${project.id}" /> " 
+				<div class="MDC-card MDC-course-card-size"  onclick="<t:url value="/task/details?id=${tasks.id}&projectId=${tasks.project.id}" />">
+					<a href=" <t:url value="/task/details?id=${tasks.id}&projectId=${tasks.project.id}" /> " 
 						class="btn-floating btn waves-effect  MDC-absolute  right MDC-category-floatbtn-position ${backgroundColorIcon}">
 			  		<i class="material-icons">${floatIcon}</i>
 			  	</a>
 			  	
 			  	<!-- Image -->
-				  <a href=" <t:url value="/task/details?id=${tasks.id}&projectId=${project.id}" /> ">
+				  <a href=" <t:url value="/task/details?id=${tasks.id}&projectId=${tasks.project.id}" /> ">
 				  <div class="row center MDC-margin-top20">
 				  	<img src="<c:url value="/static/images/default/tasks/${tasks.icon}.png"/>"
 				    	class="MDC-avatar-circle-large MDC-shadow-default"/>
@@ -363,14 +216,14 @@
 				  <!-- Title -->
 					<div class="row center MDC-margin-bottom-10">
 				  	<font class="truncate MDC-font-15 MDC-color-grey-dark-2 MDC-font-h1">
-				    	${tasks.name}
+				    	${tasks.taskType.type}
 				    </font>
 					</div>
 					
 					<!-- Description -->
        	<div class="row center MDC-margin-bottom-10">
         	<font class="truncate MDC-font-16-2 MDC-color-grey MDC-font-h1 MDC-uppercase-none">
-          	Hours ${tasks.hours} / ${tasks.hoursUsed}
+          	${tasks.name}
           </font>
       	</div>
       	
