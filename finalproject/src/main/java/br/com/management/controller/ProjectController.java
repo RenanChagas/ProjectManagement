@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.management.model.Project;
+import br.com.management.model.Search;
 import br.com.management.model.User;
 import br.com.management.service.ProjectService;
 import br.com.management.service.UserService;
@@ -36,6 +37,12 @@ public class ProjectController {
 	@ModelAttribute("user")
 	public User getUserName() {
 		return userService.findByUsername(getPrincipal());
+	}
+	
+	@ModelAttribute("search")
+	public Search pesquisar(){
+		Search search = new Search();
+		return search;
 	}
 	
 	@RequestMapping("/projects")

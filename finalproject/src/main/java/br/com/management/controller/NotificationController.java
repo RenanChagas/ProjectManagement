@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.management.model.Notification;
+import br.com.management.model.Search;
 import br.com.management.model.User;
 import br.com.management.service.NotificationService;
 import br.com.management.service.TaskService;
@@ -34,6 +35,12 @@ public class NotificationController {
 	@ModelAttribute("user")
 	public User getUserName() {
 		return userService.findByUsername(getPrincipal());
+	}
+	
+	@ModelAttribute("search")
+	public Search pesquisar(){
+		Search search = new Search();
+		return search;
 	}
 	
 	@RequestMapping(value = { "" , "/" })

@@ -80,13 +80,13 @@
         	<!-- Search -->
         	<div class="col s12 m7 l7">
           		<div class="MDC-nav-search-position">
-            	<form>
+            	<form:form id="searchForm" action="/finalproject/search?string" method="POST" modelAttribute="search">
               		<div class="input-field">
-                		<input id="search" type="search" class="MDC-nav-search-focus" required>
+                		<form:input id="input_text" type="search" class="MDC-nav-search-focus" path="string" />
                 		<label class="label-icon" for="search"><i class="material-icons MDC-nav-search-focus">search</i></label>
                   		<i class="material-icons MDC-nav-search-focus">close</i>
               		</div>
-            	</form>
+            	</form:form>
           		</div>
         	</div>
 

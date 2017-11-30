@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.management.model.Project;
+import br.com.management.model.Search;
 import br.com.management.model.Task;
 import br.com.management.model.User;
 import br.com.management.model.TaskType;
@@ -46,9 +47,16 @@ public class TaskController {
 		return userService.findByUsername(getPrincipal());
 	}
 	
+	
 	@ModelAttribute("allUsers")
 	public List<User> getAllUsers() {
 		return userService.findAllByOrderByIdAsc();
+	}
+	
+	@ModelAttribute("search")
+	public Search pesquisar(){
+		Search search = new Search();
+		return search;
 	}
 	
 	@RequestMapping(value = "/projects/tasks", method = RequestMethod.GET)
@@ -187,6 +195,16 @@ public class TaskController {
 		taskService.deleteById(deleteTask.getId());
 		
 		return "redirect:/projects/tasks?";
+	}
+	
+	@RequestMapping(value = "/search", method = RequestMethod.POST)
+	public String search(ModelMap model, @RequestParam("string") String search) {
+		
+		search = search.replaceAll(",", "");
+		System.out.println("search:" + search);
+		model.addAttribute("task", taskService.findByNameContaining(search));
+		model.addAttribute("searchValue", search);
+		return "search";
 	}
 	
 	private String getPrincipal(){

@@ -40,7 +40,6 @@ public class TaskServiceImpl implements TaskService{
 	@Autowired
 	private ProjectDao	projectDao;
 	
-
 	@Override
 	public void save(Task task) {
 		
@@ -205,6 +204,11 @@ public class TaskServiceImpl implements TaskService{
 			default:
 				return dao.findAllByProjectIdOrderByIdDesc(id);
 		}
+	}
+
+	@Override
+	public List<Task> findByNameContaining(String search) {
+		return dao.findByNameContaining(search);
 	}
 
 }

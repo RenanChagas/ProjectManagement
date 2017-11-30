@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import br.com.management.model.Search;
 import br.com.management.model.Task;
 import br.com.management.model.User;
 import br.com.management.model.UserProfile;
@@ -46,6 +47,12 @@ public class AccessController {
 	@ModelAttribute("user")
 	public User getUserName() {
 		return userService.findByUsername(getPrincipal());
+	}
+	
+	@ModelAttribute("search")
+	public Search pesquisar(){
+		Search search = new Search();
+		return search;
 	}
 	
 	@RequestMapping(value = { "/","/home", "/dashboard" })
@@ -231,6 +238,8 @@ public class AccessController {
 		model.addAttribute("pendingTasks", pendingTasks);
 		model.addAttribute("completedTasks", completedTasks);
 		model.addAttribute("allTasks", allTasks.size());
+		
+		//model.addAttribute("search", search);
 		return "dashboard";
 	}
 	

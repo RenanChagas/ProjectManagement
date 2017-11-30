@@ -20,7 +20,10 @@ import java.io.FileOutputStream;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
+import br.com.management.model.Search;
+import br.com.management.model.Task;
 import br.com.management.model.User;
+import br.com.management.service.TaskService;
 import br.com.management.service.UserProfileService;
 import br.com.management.service.UserService;
 
@@ -36,10 +39,19 @@ public class ProfileController {
 	@Autowired
 	ServletContext context;
 	
+	@Autowired
+	TaskService taskService;
+	
 	@ModelAttribute("user")
 	public User getUserName() {
 		return userService.findByUsername(getPrincipal());
 	}	
+	
+	@ModelAttribute("search")
+	public Search pesquisar(){
+		Search search = new Search();
+		return search;
+	}
 	
 	@RequestMapping(value = "/profile", method = RequestMethod.GET)
 	public String profile(ModelMap model) {

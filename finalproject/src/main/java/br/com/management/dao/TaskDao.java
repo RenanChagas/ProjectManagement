@@ -47,4 +47,6 @@ public interface TaskDao extends JpaRepository<Task, Long>{
 	@Transactional
 	public void deleteById(int id);
 
+	public List<Task> findByNameContaining(String search);
+
 }

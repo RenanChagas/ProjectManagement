@@ -23,6 +23,8 @@ public interface TaskService {
 	
 	public List<Task> findAllByUser(User user);
 	
+	public List<Task> findByNameContaining(String search);
+	
 	//Filter My Task
 	public List<Task> findMyTaskByFilter(String sortingType, User user);
 	
