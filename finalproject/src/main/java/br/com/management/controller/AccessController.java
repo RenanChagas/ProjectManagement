@@ -8,7 +8,10 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.fileupload.disk.DiskFileItem;
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,6 +22,19 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import javax.servlet.ServletContext;
+
+
 
 import br.com.management.model.Search;
 import br.com.management.model.Task;
@@ -30,6 +46,9 @@ import br.com.management.service.UserService;
 
 @Controller
 public class AccessController {
+	
+	@Autowired
+	ServletContext context;
 	
 	@Autowired
 	UserProfileService userProfileService;
@@ -69,19 +88,58 @@ public class AccessController {
 	}
 	
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
-	public String signupPost( @ModelAttribute("newUser") User newUser, BindingResult result, ModelMap model) {
-		
-		
+	public String signupPost( @ModelAttribute("newUser") User newUser, BindingResult result, ModelMap model) throws IOException {
+
 		String arr[] = newUser.getLastName().split(" ", 2);
-		
-		
-		
+
 		String firstWord = arr[0]; 
 		String theRest = arr[1];
 		
 		newUser.setFirstName(firstWord);
 		newUser.setLastName(theRest);
 		newUser.setJobDesc("your job description");
+		
+		//TESTANDO
+		String filepath = context.getRealPath("");
+		filepath = filepath + "static/images/avatar";
+		
+		String defaultPath = context.getRealPath("");
+		defaultPath = defaultPath + "static/images/default";
+		
+		File defaultDir = new File(defaultPath + File.separator +  "default-avatar" + ".png");
+		FileInputStream input = new FileInputStream(defaultDir);
+		
+		
+		
+		MultipartFile multipartFile = new MockMultipartFile("file",
+				defaultDir.getName(), "image/PNG", IOUtils.toByteArray(input));
+		
+		
+		
+		System.out.println("TESTE LOCALIZACAO" + defaultDir.getAbsolutePath());
+		
+		DiskFileItem fileItem = new DiskFileItem("defaultDir", "image/PNG", true, defaultDir.getName(), (int) defaultDir.length()
+				, defaultDir.getParentFile());
+		fileItem.getOutputStream();
+		
+		System.out.println("TESTE 2" +fileItem.getString());
+		
+		
+		byte[] bytes = multipartFile.getBytes();
+		
+		
+		File dir = new File(filepath + File.separator +  newUser.getUsername());
+		if (!dir.exists())
+			dir.mkdirs();
+
+		// Create the file on server
+		File serverFile = new File(dir.getAbsolutePath()
+				+ File.separator + newUser.getUsername() + ".png");
+		BufferedOutputStream stream = new BufferedOutputStream(
+				new FileOutputStream(serverFile));
+		stream.write(bytes);
+		stream.close();
+		
 		
 		System.out.println("verificando o usuário" + newUser);
 		userService.save(newUser);
