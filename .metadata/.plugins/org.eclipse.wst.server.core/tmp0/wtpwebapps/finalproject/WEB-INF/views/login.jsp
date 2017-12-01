@@ -24,6 +24,7 @@
 
 </head>
 <body>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
   <!-- Background image -->
 	<div class="MDC-login-background"></div>
@@ -74,7 +75,7 @@
         <div class="row MDC-margin-top20">
           <div class="col s12">
             <div class="MDC-color-grey-dark-2 MDC-login-form-size center-align MDC-font-15 MDC-font-weight-300">
-              Don't have an account yet ? <a href="signup.html">Click here</a>
+              Don't have an account yet ? <a href="${contextPath}/signup">Click here</a>
             </div>
           </div>
         </div>

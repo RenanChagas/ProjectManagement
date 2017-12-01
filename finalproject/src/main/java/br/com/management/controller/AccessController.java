@@ -15,6 +15,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -53,6 +54,22 @@ public class AccessController {
 	public Search pesquisar(){
 		Search search = new Search();
 		return search;
+	}
+	
+	@RequestMapping(value = "/signup", method = RequestMethod.GET)
+	public String signupGet(ModelMap model) {
+		
+		model.addAttribute("newUser", new User());
+		return "signup";
+	}
+	
+	@RequestMapping(value = "/signup", method = RequestMethod.POST)
+	public String signupPost( @ModelAttribute("newUser") User newUser, BindingResult result, ModelMap model) {
+		
+		
+		System.out.println("verificando o usuário" + newUser);
+		
+		return "signup";
 	}
 	
 	@RequestMapping(value = { "/","/home", "/dashboard" })

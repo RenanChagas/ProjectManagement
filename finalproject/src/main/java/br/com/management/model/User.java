@@ -41,7 +41,7 @@ public class User {
 	private String firstName;
 
 	@NotEmpty
-	@Column(name="LAST_NAME", nullable=false)
+	@Column(name="LAST_NAME", nullable=true)
 	private String lastName;
 
 	@NotEmpty
@@ -49,7 +49,7 @@ public class User {
 	private String email;
 	
 	@NotEmpty
-	@Column(name="JOB_DESC", nullable=false)
+	@Column(name="JOB_DESC", nullable=true)
 	private String jobDesc;
 
 	@NotEmpty
