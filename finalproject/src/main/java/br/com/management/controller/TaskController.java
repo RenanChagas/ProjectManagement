@@ -1,10 +1,15 @@
 package br.com.management.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +24,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import br.com.management.model.FilesModel;
 import br.com.management.model.Project;
 import br.com.management.model.Search;
 import br.com.management.model.Task;
@@ -32,6 +39,9 @@ import br.com.management.service.UserService;
 
 @Controller
 public class TaskController {
+	
+	@Autowired
+	ServletContext context;
 	
 	@Autowired
 	UserService userService;
@@ -114,7 +124,8 @@ public class TaskController {
 	}
 	
 	@RequestMapping(value = "/task/create", method = RequestMethod.POST)
-	public String newTask(@RequestParam("id") int projectId, @RequestParam("taskType") int taskType, ModelMap model, Task task,
+	public String newTask(@RequestParam("id") int projectId, @RequestParam("taskType") int taskType, 
+			@RequestParam("file") MultipartFile file, ModelMap model, Task task,
 			BindingResult result, RedirectAttributes ra, @ModelAttribute("userId") int userId) {
 		
 		TaskType taskType2 = new TaskType();
@@ -137,6 +148,42 @@ public class TaskController {
 		task.setProject(project);
 		
 		taskService.save(task);
+		
+		Task lastTask = taskService.findFirstByOrderByIdDesc();
+		
+		System.out.println("Verificando o id da tarefa" + lastTask.getId());
+		
+		if (!file.isEmpty()) {
+			try {
+				byte[] bytes = file.getBytes();
+				System.out.println("File exists");
+				
+				// Creating the directory to store file
+				String rootPath = System.getProperty("catalina.home");
+				String filepath = context.getRealPath("");
+				filepath = filepath + "static/tasks";
+				
+				File dir = new File(filepath + File.separator +  lastTask.getId());
+				if (!dir.exists())
+					dir.mkdirs();
+				
+				// Create the file on server
+				File serverFile = new File(dir.getAbsolutePath()
+						+ File.separator +file.getOriginalFilename());
+				
+				BufferedOutputStream stream = new BufferedOutputStream(
+						new FileOutputStream(serverFile));
+				stream.write(bytes);
+				stream.close();
+				
+				System.out.println("Server File Location="
+						+ serverFile.getAbsolutePath());
+			
+			} catch (Exception e) {
+				System.out.println("You failed to upload " + getUserName().getUsername() + " => " + e.getMessage());
+			}
+		}
+		
 		ra.addAttribute("id", projectId);
 		return "redirect:/projects/tasks";
 	}
@@ -149,18 +196,44 @@ public class TaskController {
 		Project project = projectService.findById(projectId);
 		Task task = taskService.findById(taskId);
 		
-		
-		System.out.println("Task USER TESTE 2 " + task.getUser());
-		System.out.println("Task teste 5 " + task);
-		
 		model.addAttribute("project", project);
 		model.addAttribute("task", task);
 		model.addAttribute("userId", userId);
+		
+		//RETRIEVE ALL THE FILES
+		
+		String filepath = context.getRealPath("");
+		filepath = filepath + "static/tasks";
+		File dir = new File(filepath + File.separator +  task.getId());
+				
+		File folder = new File(dir.getAbsolutePath());
+		File[] listOfFiles = folder.listFiles();
+				
+		List<FilesModel> files = new ArrayList<FilesModel>();
+				
+
+			for (int i = 0; i < listOfFiles.length; i++) {
+				if (listOfFiles[i].isFile()) {
+					System.out.println("File " + listOfFiles[i].getName());
+				    FilesModel filesModel = new FilesModel();
+				    filesModel.setLocation(dir.getAbsolutePath() +  File.separator + listOfFiles[i].getName());
+				    filesModel.setName(listOfFiles[i].getName());
+				        
+				    files.add(filesModel);
+				        
+				    } else if (listOfFiles[i].isDirectory()) {
+				    	System.out.println("Directory " + listOfFiles[i].getName());
+				    }
+			}
+				
+		System.out.println("LINKS" + files.toString());
+		model.addAttribute("FilesProject", files);
+		
 		return "taskDetail";
 	}
 	
 	@RequestMapping(value = "/task/details", method = RequestMethod.POST)
-	public String updateProject(Model model,@ModelAttribute("task") Task task, BindingResult result, 
+	public String updateProject(@RequestParam("file") MultipartFile file, Model model,@ModelAttribute("task") Task task, BindingResult result, 
 			RedirectAttributes ra, @ModelAttribute("userId") int userId) {
 		
 		System.out.println("TESTE 1" + task);
@@ -179,6 +252,40 @@ public class TaskController {
 		
 		Task search = taskService.findById(task.getId());
 		taskService.update(task);
+		
+		
+		if (!file.isEmpty()) {
+			try {
+				byte[] bytes = file.getBytes();
+				System.out.println("File exists");
+				
+				// Creating the directory to store file
+				String rootPath = System.getProperty("catalina.home");
+				String filepath = context.getRealPath("");
+				filepath = filepath + "static/tasks";
+				
+				File dir = new File(filepath + File.separator +  task.getId());
+				if (!dir.exists())
+					dir.mkdirs();
+				
+				// Create the file on server
+				File serverFile = new File(dir.getAbsolutePath()
+						+ File.separator +file.getOriginalFilename());
+				
+				BufferedOutputStream stream = new BufferedOutputStream(
+						new FileOutputStream(serverFile));
+				stream.write(bytes);
+				stream.close();
+				
+				System.out.println("Server File Location="
+						+ serverFile.getAbsolutePath());
+				
+			
+			} catch (Exception e) {
+				System.out.println("You failed to upload " + getUserName().getUsername() + " => " + e.getMessage());
+			}
+		}
+		
 		
 		
 		ra.addAttribute("id", search.getProject().getId());

@@ -175,7 +175,7 @@
 <!-- TITLE PAGE-END-->
 
 <!-- CONTAINER-->
-<form:form id="taskCreate-form" method="POST" commandName="task" class="form-horizontal">
+<form:form id="taskCreate-form" method="POST" commandName="task" class="form-horizontal" enctype="multipart/form-data">
 <div class="MDC-page-center MDC-page-container MDC-margin-top40">
 	<div class="row MDC-float-none">
      	<!-- CONTEUDO -->
@@ -216,7 +216,7 @@
                         <div class="file-field input-field MDC-margin-bottom40 MDC-margin-left10">
                         	<div class="btn waves-light blue MDC-form-text">
                             	<span>File</span>
-                                <input type="file" multiple>
+                                <input type="file"  name="file" id="file">
                             </div>
                             <div class="file-path-wrapper">
 	                            <input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
@@ -224,6 +224,7 @@
 	                            	type="text" placeholder="Upload files">
                            	</div>
                     	</div>
+                    	<!-- File Upload-END-->
                     	<!-- File Upload-END-->
                     	<!-- Due date -->
                         <div class="row MDC-margin-bottom30">

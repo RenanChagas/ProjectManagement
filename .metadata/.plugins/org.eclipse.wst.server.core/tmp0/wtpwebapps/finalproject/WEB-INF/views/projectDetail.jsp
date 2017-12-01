@@ -169,7 +169,7 @@
 <!-- TITLE PAGE-END-->
 
 <!-- CONTAINER-->
-<form:form id="projectCreate-form" method="POST" modelAttribute="project" class="form-horizontal">
+<form:form id="projectCreate-form" method="POST" modelAttribute="project" class="form-horizontal" enctype="multipart/form-data">
 <div class="MDC-page-center MDC-page-container MDC-margin-top40">
 	<div class="row MDC-float-none">
      	<!-- CONTEUDO -->
@@ -228,27 +228,28 @@
                         <div class="file-field input-field MDC-margin-bottom40 MDC-margin-left10">
                         	<div class="btn waves-light blue MDC-form-text">
                             	<span>File</span>
-                                <input type="file" multiple>
+                                <input type="file"  name="file" id="file">
                             </div>
                             <div class="file-path-wrapper">
 	                            <input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
 	                            	MDC-font-weight-300 MDC-maxSize-60perc"
 	                            	type="text" placeholder="Upload files">
                            	</div>
-                    	</div>
+                    		</div>
                     	<!-- File Upload-END-->
                     	<!-- Links -->
+                    	<div class="row MDC-margin-bottom40">
                     	<c:forEach items="${FilesProject}" var="FilesProjects">
-                    		<div class="row MDC-margin-bottom40">
+                    		
                         	<a href="file://///${FilesProjects.location}" target="_blank">
                             	<div class="chip MDC-background-blue MDC-white-text">
                                 	${FilesProjects.name}
                                     <i class="close material-icons">insert_drive_file</i>
                              	</div>
                        		</a>
-                       	</div>
+                       	
                     	</c:forEach>
-                    	
+                    	</div>
                     	
                        
                         <!-- Links-END-->
@@ -449,19 +450,6 @@
                          		<label for="textareaFinish">Content</label>
                             </div>
                      	</div>
-
-                        <!-- File Upload -->
-                        <div class="file-field input-field MDC-margin-bottom40 MDC-margin-left10">
-                        	<div class="btn waves-light blue MDC-form-text">
-                            	<span>File</span>
-                                <input type="file" multiple>
-                       		</div>
-                        	<div class="file-path-wrapper">
-                        		<input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
-                            		MDC-font-weight-300 MDC-maxSize-60perc"
-                                	type="text" placeholder="Upload files">
-                    		</div>
-                		</div>
                      	<!-- Status -->
                         <div class="row MDC-margin-bottom30">
                         	<div class="col">

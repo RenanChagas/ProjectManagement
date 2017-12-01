@@ -17,6 +17,8 @@ public interface TaskService {
 	
 	public Task findByName(String name);
 	
+	public Task findFirstByOrderByIdDesc();
+	
 	public List<Task> findAllByOrderByIdAsc();
 	
 	public List<Task> findAllByProjectIdOrderByIdAsc(int id);

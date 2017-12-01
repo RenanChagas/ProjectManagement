@@ -180,7 +180,7 @@
 
 
 <!-- CONTAINER-->
-<form:form id="taskUpdate-form" method="POST" modelAttribute="task" class="form-horizontal">
+<form:form id="taskUpdate-form" method="POST" modelAttribute="task" class="form-horizontal" enctype="multipart/form-data">
 
 <c:set var="disableField" value="true" />
 <c:if test="${task.createUser == userLogin.username}">
@@ -240,19 +240,37 @@
                             </div>
                         </div>
                         <!-- Description-END-->
-                        <!-- File Upload -->
+                       <!-- File Upload -->
                         <div class="file-field input-field MDC-margin-bottom40 MDC-margin-left10">
                         	<div class="btn waves-light blue MDC-form-text">
                             	<span>File</span>
-                                <input type="file" multiple>
+                                <input type="file"  name="file" id="file">
                             </div>
                             <div class="file-path-wrapper">
 	                            <input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
 	                            	MDC-font-weight-300 MDC-maxSize-60perc"
 	                            	type="text" placeholder="Upload files">
                            	</div>
-                    	</div>
+                    		</div>
                     	<!-- File Upload-END-->
+                    	<!-- Links -->
+                    	<div class="row MDC-margin-bottom40">
+                    	<c:forEach items="${FilesProject}" var="FilesProjects">
+                    		
+                        	<a href="file://///${FilesProjects.location}" target="_blank">
+                            	<div class="chip MDC-background-blue MDC-white-text">
+                                	${FilesProjects.name}
+                                    <i class="close material-icons">insert_drive_file</i>
+                             	</div>
+                       		</a>
+                       	
+                    	</c:forEach>
+                    	</div>
+                    	
+                       
+                        <!-- Links-END-->
+                    	
+                    	
                     	<!-- Due date -->
                     	<fmt:formatDate value="${task.dueDate}" pattern="dd/MM/yyyy" var="theFormattedDate"/>
                         <div class="row MDC-margin-bottom30">
@@ -325,19 +343,6 @@
                             </div>
                      	</div>
 
-                        <!-- File Upload -->
-                        <div class="file-field input-field MDC-margin-bottom40 MDC-margin-left10">
-                        	<div class="btn waves-light blue MDC-form-text">
-                            	<span>File</span>
-                                <input type="file" multiple>
-                       		</div>
-                        	<div class="file-path-wrapper">
-                        		<input class="file-path validate MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
-                            		MDC-font-weight-300 MDC-maxSize-60perc"
-                                	type="text" placeholder="Upload files">
-                    		</div>
-                		</div>
-                		
                 		  <!-- Hours -->      
                       <div class="row MDC-margin-bottom30">
                       	<div class="col MDC-maxSize-300">

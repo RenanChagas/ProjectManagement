@@ -60,6 +60,7 @@ public class TaskServiceImpl implements TaskService{
 		Task createTask = dao.saveAndFlush(task);
 		
 		
+		
 		//Adicionar a quantidade de horas ao projeto
 		Project project = projectService.findById(task.getProject().getId());
 		project.setHours(task.getHours() + project.getHours());
@@ -221,6 +222,11 @@ public class TaskServiceImpl implements TaskService{
 	@Override
 	public List<Task> findByNameContaining(String search) {
 		return dao.findByNameContaining(search);
+	}
+
+	@Override
+	public Task findFirstByOrderByIdDesc() {
+		return dao.findFirstByOrderByIdDesc();
 	}
 
 }
