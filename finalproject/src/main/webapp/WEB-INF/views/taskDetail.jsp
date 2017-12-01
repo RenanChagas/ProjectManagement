@@ -225,7 +225,7 @@
                            	<div class="input-field col s12">
                             	<form:input id="input_text" placeholder="Type of document you expect..." type="text"
                                 	path="name" data-length="20" class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2
-                                   										MDC-font-weight-300 " disabled="${disableField}" />
+                                   										MDC-font-weight-300 " readonly="${disableField}" />
                                 <label for="input_text">Title</label>
                            </div>
                         </div>
@@ -235,7 +235,7 @@
                         	<div class="input-field col s12">
                              	<form:textarea id="textareaOverview" placeholder="Tell the content here..."
                                 	path="description"	class="materialize-textarea MDC-border-grey-light MDC-font-17 MDC-color-black
-                                						MDC-font-weight-300" disabled="${disableField}"/>
+                                						MDC-font-weight-300" readonly="${disableField}"/>
                          		<label for="textareaOverview">Content</label>
                             </div>
                         </div>
@@ -262,7 +262,7 @@
 	                        			value=""
                                 		placeholder="${theFormattedDate}"	
                                 		class="datepicker MDC-border-grey-light 
-                                		MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" disabled="${disableField}"/>
+                                		MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" readonly="${disableField}"/>
 	                        </div>
                         </div>
                         <!-- Due date-END-->
@@ -271,7 +271,7 @@
                       <div class="row MDC-margin-bottom30">
                       	<div class="col MDC-maxSize-300">
                       		<form:input id="input_hours" placeholder="0.0 Hours" type="number" path="hours" step="0.1"
-														class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" disabled="${disableField}"/>
+														class="MDC-border-grey-light MDC-font-17 MDC-color-grey-dark-2 MDC-font-weight-300" readonly="${disableField}"/>
                                 <label for="input_hours">Hours</label>
                       	</div>
                       </div>

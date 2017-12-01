@@ -49,7 +49,7 @@ public class User {
 	private String email;
 	
 	@NotEmpty
-	@Column(name="JOB_DESC", nullable=true)
+	@Column(name="JOB_DESC")
 	private String jobDesc;
 
 	@NotEmpty
@@ -160,7 +160,7 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password
 				+ ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + 
-				", jobDesc=" + jobDesc + ", state=" + state + ", userProfiles=" + userProfiles +"]";
+				", state=" + state + ", userProfiles=" + userProfiles +"]";
 	}
 
 	

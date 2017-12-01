@@ -21,6 +21,15 @@
   
   <!-- Website Logo -->
   <link rel="icon" href="<c:url value="/static/images/default/logo.png"/>">
+  
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('#userProfile').material_select();
+
+  </script>
+  
 
 </head>
 <body>
@@ -36,6 +45,9 @@
       <!-- Form -->
       <c:url var="loginUrl" value="/signup" />
       <form:form id="createUser" method="POST" modelAttribute="newUser" class="form-horizontal">
+      
+      
+      <form:select  id="userProfile" path="userProfiles" items="${normalUser}" multiple="false" itemValue="id" itemLabel="type"/>
       
       	<!-- full name -->
         <div class="col s12">
@@ -71,6 +83,8 @@
             	MDC-color-grey-dark-2 MDC-font-15 MDC-font-weight-300"/>
           </div>
         </div>
+        
+        
         <!-- Submit -->
         <!-- Login Button -->
         <div class="col s12">

@@ -151,6 +151,7 @@ public class TaskController {
 		
 		
 		System.out.println("Task USER TESTE 2 " + task.getUser());
+		System.out.println("Task teste 5 " + task);
 		
 		model.addAttribute("project", project);
 		model.addAttribute("task", task);
@@ -159,8 +160,10 @@ public class TaskController {
 	}
 	
 	@RequestMapping(value = "/task/details", method = RequestMethod.POST)
-	public String updateProject(Model model, Task task, BindingResult result, 
+	public String updateProject(Model model,@ModelAttribute("task") Task task, BindingResult result, 
 			RedirectAttributes ra, @ModelAttribute("userId") int userId) {
+		
+		System.out.println("TESTE 1" + task);
 		
 		//SETANDO O USUARIO DA TASK
 		User userTask = userService.findById(userId);

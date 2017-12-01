@@ -33,4 +33,15 @@ public class UserProfileServiceImpl implements UserProfileService{
 		return dao.findAllByOrderByIdAsc();
 	}
 
+	@Override
+	public List<UserProfile> findNormalUser(int id) {
+		return dao.findByIdOrderByIdAsc(id);
+	}
+
+	@Override
+	public List<UserProfile> findAllByOrderByIdAsc(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

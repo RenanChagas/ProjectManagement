@@ -92,14 +92,24 @@ public class TaskServiceImpl implements TaskService{
 		project.setHours(project.getHours() - updateTask.getHours());
 		project.setHoursUsed(project.getHoursUsed() - updateTask.getHoursUsed());
 		
+		System.out.println("TASK 1" + updateTask);
+		
+		System.out.println("TASK 2" + task);
+		
+		
 		
 		updateTask.setName(task.getName());
 		updateTask.setDescription(task.getDescription());
 		updateTask.setState(task.getState());
 		updateTask.setHoursUsed(task.getHoursUsed());
 		updateTask.setHours(task.getHours());
-		updateTask.setUser(task.getUser());
 		
+		
+		System.out.println("TASK 3" + updateTask);
+		
+		if (task.getUser() != null){
+			updateTask.setUser(task.getUser());
+		}
 		if (task.getDueDate() != null){
 			updateTask.setDueDate(task.getDueDate());
 		}
@@ -119,6 +129,8 @@ public class TaskServiceImpl implements TaskService{
 		if (task.getCreateUser() != null){
 			updateTask.setCreateUser(task.getCreateUser());
 		}
+		
+		System.out.println("TASK 4" + updateTask);
 		
 		System.out.println("horas posteriores" +updateTask.getHours());
 		

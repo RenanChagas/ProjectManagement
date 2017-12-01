@@ -8,7 +8,9 @@ public interface UserProfileService {
 	
 	public List<UserProfile> findAll();
 	
-	public List<UserProfile> findAllByOrderByIdAsc();
+	public List<UserProfile> findNormalUser(int id);
+	
+	public List<UserProfile> findAllByOrderByIdAsc(int id);
 
 	public UserProfile findByType(String type);
 

@@ -347,7 +347,20 @@
           <a href="#">
             <div class="row center MDC-margin-top20">
               <div class="MDC-margin-right20 MDC-margin-left20">
-                  <canvas class="MDC-margin-top20 center" id="chartjs-doughnut" width="10" height="10"></canvas>
+              
+              <c:choose>
+								<c:when test="${taskTypeBug=='0' && taskTypeTest=='0'}">
+									No tasks assigned this month
+								</c:when>
+								<c:otherwise>
+									<canvas class="MDC-margin-top20 center" id="chartjs-doughnut" width="10" height="10"></canvas>
+								</c:otherwise>
+							</c:choose>
+              
+              
+              
+              
+                  
               </div>
               <script type="text/javascript">
               new Chart(document.getElementById("chartjs-doughnut"), {
@@ -361,7 +374,7 @@
                     ],
                     backgroundColor: [
                     "#e53935",
-                    "#00b39f",
+                    "#2196F3",
                     ],
                     label: ""
                   }]
