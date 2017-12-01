@@ -150,37 +150,37 @@ public class ProjectController {
 		model.addAttribute("project", projectService.findById(projectId));
 		System.out.println(projectService.findById(projectId));
 		
-		//RETRIEVE ALL THE FILES
-		
+		String rootPath = System.getProperty("catalina.home");
 		String filepath = context.getRealPath("");
 		filepath = filepath + "static/projects";
+		
 		File dir = new File(filepath + File.separator +  project.getId());
-		
-		File folder = new File(dir.getAbsolutePath());
-		File[] listOfFiles = folder.listFiles();
-		
-		
-		
-		List<FilesModel> files = new ArrayList<FilesModel>();
-		
+		if (dir.exists()){
 
-		    for (int i = 0; i < listOfFiles.length; i++) {
-		      if (listOfFiles[i].isFile()) {
-		        System.out.println("File " + listOfFiles[i].getName());
-		        FilesModel filesModel = new FilesModel();
-		        filesModel.setLocation(dir.getAbsolutePath() +  File.separator + listOfFiles[i].getName());
-		        filesModel.setName(listOfFiles[i].getName());
-		        
-		        files.add(filesModel);
-		        //files.add(dir.getAbsolutePath() +  File.separator + listOfFiles[i].getName());
-		        
-		      } else if (listOfFiles[i].isDirectory()) {
-		        System.out.println("Directory " + listOfFiles[i].getName());
-		      }
-		    }
-		
-		System.out.println("LINKS" + files.toString());
-		model.addAttribute("FilesProject", files);
+			File folder = new File(dir.getAbsolutePath());
+			File[] listOfFiles = folder.listFiles();
+
+			List<FilesModel> files = new ArrayList<FilesModel>();
+			
+			    for (int i = 0; i < listOfFiles.length; i++) {
+			      if (listOfFiles[i].isFile()) {
+			        System.out.println("File " + listOfFiles[i].getName());
+			        FilesModel filesModel = new FilesModel();
+			        filesModel.setLocation(dir.getAbsolutePath() +  File.separator + listOfFiles[i].getName());
+			        filesModel.setName(listOfFiles[i].getName());
+			        
+			        files.add(filesModel);
+			        //files.add(dir.getAbsolutePath() +  File.separator + listOfFiles[i].getName());
+			        
+			      } else if (listOfFiles[i].isDirectory()) {
+			        System.out.println("Directory " + listOfFiles[i].getName());
+			      }
+			    }
+			
+			System.out.println("LINKS" + files.toString());
+			model.addAttribute("FilesProject", files);
+			
+		}
 		
 		return "projectDetail";
 	}
