@@ -1,9 +1,15 @@
 package br.com.management.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,15 +24,20 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import br.com.management.model.Project;
 import br.com.management.model.Search;
 import br.com.management.model.User;
 import br.com.management.service.ProjectService;
 import br.com.management.service.UserService;
+import br.com.management.model.FilesModel;
 
 @Controller
 public class ProjectController {
+	
+	@Autowired
+	ServletContext context;
 	
 	@Autowired
 	UserService userService;
@@ -71,8 +82,10 @@ public class ProjectController {
 	}
 	
 	@RequestMapping(value = "/projects/create", method = RequestMethod.POST)
-	public String newProject(Project project,
+	public String newProject(Project project, @RequestParam("file") MultipartFile file,
 			BindingResult result, ModelMap model) {
+		
+		
 		
 		if (project.getCreateUser() == null){
 			Date date = new Date();
@@ -87,6 +100,39 @@ public class ProjectController {
 			return "redirect:/projects/create";
 		}
 		projectService.save(project);
+		System.out.println("VERIFICAR SE RETORNO O ID CORRETO" + project.getId());
+		
+		
+		if (!file.isEmpty()) {
+			try {
+				byte[] bytes = file.getBytes();
+				System.out.println("File exists");
+				
+				// Creating the directory to store file
+				String rootPath = System.getProperty("catalina.home");
+				String filepath = context.getRealPath("");
+				filepath = filepath + "static/projects";
+				
+				File dir = new File(filepath + File.separator +  project.getId());
+				if (!dir.exists())
+					dir.mkdirs();
+				
+				// Create the file on server
+				File serverFile = new File(dir.getAbsolutePath()
+						+ File.separator +file.getOriginalFilename());
+				
+				BufferedOutputStream stream = new BufferedOutputStream(
+						new FileOutputStream(serverFile));
+				stream.write(bytes);
+				stream.close();
+				
+				System.out.println("Server File Location="
+						+ serverFile.getAbsolutePath());
+			
+			} catch (Exception e) {
+				System.out.println("You failed to upload " + getUserName().getUsername() + " => " + e.getMessage());
+			}
+		}
 
 		return "redirect:/projects";
 	}
@@ -103,6 +149,39 @@ public class ProjectController {
 		
 		model.addAttribute("project", projectService.findById(projectId));
 		System.out.println(projectService.findById(projectId));
+		
+		//RETRIEVE ALL THE FILES
+		
+		String filepath = context.getRealPath("");
+		filepath = filepath + "static/projects";
+		File dir = new File(filepath + File.separator +  project.getId());
+		
+		File folder = new File(dir.getAbsolutePath());
+		File[] listOfFiles = folder.listFiles();
+		
+		
+		
+		List<FilesModel> files = new ArrayList<FilesModel>();
+		
+
+		    for (int i = 0; i < listOfFiles.length; i++) {
+		      if (listOfFiles[i].isFile()) {
+		        System.out.println("File " + listOfFiles[i].getName());
+		        FilesModel filesModel = new FilesModel();
+		        filesModel.setLocation(dir.getAbsolutePath() +  File.separator + listOfFiles[i].getName());
+		        filesModel.setName(listOfFiles[i].getName());
+		        
+		        files.add(filesModel);
+		        //files.add(dir.getAbsolutePath() +  File.separator + listOfFiles[i].getName());
+		        
+		      } else if (listOfFiles[i].isDirectory()) {
+		        System.out.println("Directory " + listOfFiles[i].getName());
+		      }
+		    }
+		
+		System.out.println("LINKS" + files.toString());
+		model.addAttribute("FilesProject", files);
+		
 		return "projectDetail";
 	}
 	

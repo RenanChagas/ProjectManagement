@@ -37,7 +37,7 @@ public class ProjectServiceImpl implements ProjectService{
 	public void save(Project project) {
 		project.setFinishState(1);
 		project.setStateIcon("query_builder");
-		dao.save(project);
+		dao.saveAndFlush(project);
 	}
 
 	@Override

@@ -238,20 +238,19 @@
                     	</div>
                     	<!-- File Upload-END-->
                     	<!-- Links -->
-                        <div class="row MDC-margin-bottom40">
-                        	<a href="#">
+                    	<c:forEach items="${FilesProject}" var="FilesProjects">
+                    		<div class="row MDC-margin-bottom40">
+                        	<a href="file://///${FilesProjects.location}" target="_blank">
                             	<div class="chip MDC-background-blue MDC-white-text">
-                                	teste.pdf
+                                	${FilesProjects.name}
                                     <i class="close material-icons">insert_drive_file</i>
                              	</div>
                        		</a>
-                            <a href="#">
-                            	<div class="chip MDC-background-blue MDC-white-text">
-                            		overview.doc
-                                	<i class="close material-icons">insert_drive_file</i>
-                       			</div>
-                            </a>
-                        </div>
+                       	</div>
+                    	</c:forEach>
+                    	
+                    	
+                       
                         <!-- Links-END-->
                     	<!-- Due date -->
                         <div class="row MDC-margin-bottom30">
